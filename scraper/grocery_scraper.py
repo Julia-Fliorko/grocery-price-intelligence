@@ -294,6 +294,7 @@ def append_result_files(result, file_paths, processed_file):
         append_row_to_csv_with_schema_check(processed_row, processed_file, PROCESSED_COLUMNS)
 
 
+
 def is_bad_sams_price_candidate(text):
     text = normalize_text(text)
 
@@ -310,6 +311,31 @@ def is_bad_sams_price_candidate(text):
         "reorder",
         "checkout",
         "estimated total",
+    ]
+
+    return any(bad_value in lower_text for bad_value in bad_values)
+
+
+def is_bad_walmart_price_candidate(text):
+    text = normalize_text(text)
+
+    if not text:
+        return True
+
+    lower_text = text.lower()
+
+    bad_values = [
+        "$0.00",
+        "cart",
+        "subtotal",
+        "checkout",
+        "estimated total",
+        "protection plan",
+        "allstate",
+        "onepay",
+        "/mo",
+        "per month",
+        "as low as",
     ]
 
     return any(bad_value in lower_text for bad_value in bad_values)
@@ -347,6 +373,9 @@ def extract_old_price_from_text(price_text, store_key=None):
     # Sam's Club example: "Now $12.72 $13.68" -> old price is $13.68.
     # HEB example: "Sale $1.25 $0.97 each" -> old price is $1.25.
     if store_key == "sams_club" and "now" in lower_text:
+        return cleaned_matches[1]
+
+    if store_key == "walmart" and "now" in lower_text:
         return cleaned_matches[1]
 
     if store_key == "heb" and (
@@ -600,13 +629,176 @@ def extract_availability_from_text(body_text, store_key, price=None, price_block
     return "unknown"
 
 
-def extract_walmart_price_block(page):
-    price_block = (
-        safe_inner_text(page, '[data-testid="price-wrap"]')
-        or safe_inner_text(page, '[itemprop="price"]')
+
+def extract_walmart_price_block_from_lines(lines):
+    lines = [normalize_text(line) for line in lines if normalize_text(line)]
+
+    # Walmart rollback block example:
+    # "Now $378.00" followed by "$424.00" or same-line "Now $378.00 $424.00".
+    for index, line in enumerate(lines):
+        clean_line = normalize_text(line)
+
+        if not clean_line or "$" not in clean_line:
+            continue
+
+        if is_bad_walmart_price_candidate(clean_line):
+            continue
+
+        lower_line = clean_line.lower()
+
+        if "you save" in lower_line:
+            continue
+
+        now_match = re.search(
+            r"now\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?",
+            clean_line,
+            flags=re.IGNORECASE,
+        )
+
+        if now_match:
+            price_lines = [normalize_text(now_match.group(0))]
+            same_line_prices = re.findall(
+                r"\$\s*(?!0\.00)\d+(?:\.\d{2})?",
+                clean_line,
+                flags=re.IGNORECASE,
+            )
+
+            if len(same_line_prices) >= 2:
+                price_lines.append(same_line_prices[1])
+                return normalize_text(" ".join(price_lines))
+
+            for next_index in range(index + 1, min(index + 8, len(lines))):
+                next_line = normalize_text(lines[next_index])
+
+                if not next_line or "$" not in next_line:
+                    continue
+
+                if is_bad_walmart_price_candidate(next_line):
+                    continue
+
+                next_lower_line = next_line.lower()
+
+                if "you save" in next_lower_line:
+                    continue
+
+                old_price_match = re.search(
+                    r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?$",
+                    next_line,
+                    flags=re.IGNORECASE,
+                )
+
+                if old_price_match:
+                    price_lines.append(normalize_text(old_price_match.group(0)))
+                    break
+
+            return normalize_text(" ".join(price_lines))
+
+    # Standard Walmart product price block.
+    for index, line in enumerate(lines):
+        clean_line = normalize_text(line)
+
+        if not clean_line or "$" not in clean_line:
+            continue
+
+        if is_bad_walmart_price_candidate(clean_line):
+            continue
+
+        lower_line = clean_line.lower()
+
+        if "you save" in lower_line:
+            continue
+
+        if re.search(r"/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)\b", lower_line):
+            continue
+
+        standard_price_match = re.search(
+            r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?$",
+            clean_line,
+            flags=re.IGNORECASE,
+        )
+
+        if standard_price_match:
+            price_lines = [normalize_text(standard_price_match.group(0))]
+
+            for next_index in range(index + 1, min(index + 5, len(lines))):
+                next_line = normalize_text(lines[next_index])
+
+                if next_line and re.search(
+                    r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)",
+                    next_line,
+                    flags=re.IGNORECASE,
+                ):
+                    price_lines.append(next_line)
+                    break
+
+            return normalize_text(" ".join(price_lines))
+
+    return None
+
+
+def extract_walmart_price_block_from_body(body_text, product_title=None):
+    body_text = body_text or ""
+    lines = [normalize_text(line) for line in body_text.splitlines()]
+    lines = [line for line in lines if line]
+
+    # Anchor around the visible product title so we don't grab ad, financing, cart, or protection-plan prices.
+    if product_title:
+        normalized_title = normalize_text(product_title).lower()
+        title_index = None
+
+        for index, line in enumerate(lines):
+            if normalize_text(line).lower() == normalized_title:
+                title_index = index
+                break
+
+        if title_index is not None:
+            title_scoped_lines = lines[title_index + 1:title_index + 55]
+            title_scoped_price_block = extract_walmart_price_block_from_lines(title_scoped_lines)
+
+            if title_scoped_price_block:
+                return title_scoped_price_block
+
+    return extract_walmart_price_block_from_lines(lines)
+
+
+def extract_walmart_price_block(page, product_title=None):
+    body_text = get_body_text(page)
+    body_price_block = extract_walmart_price_block_from_body(
+        body_text,
+        product_title=product_title,
     )
 
-    return normalize_text(price_block)
+    if body_price_block:
+        return body_price_block
+
+    selectors = [
+        '[data-testid="price-wrap"]',
+        '[itemprop="price"]',
+        '[data-testid="product-price"]',
+        '[data-testid="price"]',
+        '.price',
+        'text=/Now\\s*\\$\\s*(?!0\\.00)\\d+(?:\\.\\d{2})?/',
+        'text=/\\$\\s*(?!0\\.00)\\d+(?:\\.\\d{2})?/',
+    ]
+
+    for selector in selectors:
+        value = safe_inner_text(page, selector)
+
+        if value and "$" in value:
+            extracted_price = extract_walmart_price_block_from_body(
+                value,
+                product_title=product_title,
+            )
+
+            if extracted_price:
+                return extracted_price
+
+            normalized_value = normalize_text(value)
+
+            if normalized_value and not is_bad_walmart_price_candidate(normalized_value):
+                return normalized_value
+
+    return None
 
 
 def extract_heb_price_block_from_body(body_text):
@@ -1180,6 +1372,9 @@ def extract_current_price_from_text(price_block_text, store_key=None):
     if store_key == "sams_club" and "now" in lower_text:
         return cleaned_matches[0]
 
+    if store_key == "walmart" and "now" in lower_text:
+        return cleaned_matches[0]
+
     # Whole Foods sale block example: "$4.66 $5.49 ($0.93 / ounce)".
     # The first product price is the active current price.
     if store_key == "whole_foods":
@@ -1193,10 +1388,10 @@ def extract_product_fields(page, store_key):
     body_text = get_body_text(page)
 
     if store_key == "walmart":
-        price_block_text = extract_walmart_price_block(page)
+        price_block_text = extract_walmart_price_block(page, product_title=title)
         price = extract_current_price_from_text(price_block_text, store_key=store_key)
         old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
-        price_context_source = f"{price_block_text or ''} {body_text or ''}"
+        price_context_source = price_block_text
     elif store_key == "heb":
         price_block_text = extract_heb_price_block(page)
         price = extract_heb_main_price(price_block_text)
