@@ -53,6 +53,7 @@ RAW_COLUMNS = [
     "product_url",
     "product_title_raw",
     "price_raw",
+    "old_price_raw",
     "unit_price_raw",
     "price_block_raw",
     "price_context_raw",
@@ -71,6 +72,7 @@ PROCESSED_COLUMNS = [
     "product_url",
     "product_title_raw",
     "price_raw",
+    "old_price_raw",
     "unit_price_raw",
     "price_block_raw",
     "price_context_raw",
@@ -326,6 +328,46 @@ def extract_main_price_from_text(price_text):
 
     return dollar_matches[0].replace(" ", "")
 
+# New function: extract_old_price_from_text
+def extract_old_price_from_text(price_text, store_key=None):
+    price_text = normalize_text(price_text)
+
+    if not price_text:
+        return None
+
+    lower_text = price_text.lower()
+    dollar_matches = re.findall(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_text)
+
+    if len(dollar_matches) < 2:
+        return None
+
+    cleaned_matches = [match.replace(" ", "") for match in dollar_matches]
+
+    # Sale/coupon/deal blocks usually contain current and old prices together.
+    # Sam's Club example: "Now $12.72 $13.68" -> old price is $13.68.
+    # HEB example: "Sale $1.25 $0.97 each" -> old price is $1.25.
+    if store_key == "sams_club" and "now" in lower_text:
+        return cleaned_matches[1]
+
+    if store_key == "heb" and (
+        "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
+    ):
+        return cleaned_matches[0]
+
+    # Whole Foods sale example:
+    # "$4.66 $5.49 ($0.93 / ounce)"
+    # The second standalone product price is the old crossed-out price.
+    if store_key == "whole_foods" and len(cleaned_matches) >= 2:
+        return cleaned_matches[1]
+
+    if "was" in lower_text or "save" in lower_text or "off" in lower_text:
+        return cleaned_matches[1]
+
+    if "now" in lower_text and len(cleaned_matches) >= 2:
+        return cleaned_matches[1]
+
+    return None
+
 
 def extract_unit_price_from_text(price_text):
     price_text = normalize_text(price_text)
@@ -497,26 +539,28 @@ def extract_sams_club_availability(body_text, price=None, price_block_text=None)
     price_block_text = price_block_text or ""
     combined_text_lower = f"{body_text.lower()} {price_block_text.lower()}"
 
-    if "out of stock" in combined_text_lower:
-        return "out_of_stock"
+    # Sam's Club can show "Shipping out of stock" while Pickup/Delivery are still available.
+    # Strong purchasability signals must win over shipping-only unavailable text.
+    if price and "add to cart" in combined_text_lower:
+        return "in_stock"
+
+    if price and "pickup" in combined_text_lower:
+        return "in_stock"
+
+    if price and "delivery" in combined_text_lower:
+        return "in_stock"
 
     if "sold out" in combined_text_lower:
         return "sold_out"
+
+    if "out of stock" in combined_text_lower and not price:
+        return "out_of_stock"
 
     if "not available" in combined_text_lower and not price:
         return "unavailable"
 
     if "shipping not available" in combined_text_lower and price:
         return "likely_in_stock"
-
-    if "pickup" in combined_text_lower and price:
-        return "in_stock"
-
-    if "delivery" in combined_text_lower and price:
-        return "in_stock"
-
-    if "add to cart" in combined_text_lower and price:
-        return "in_stock"
 
     if price:
         return "likely_in_stock"
@@ -570,43 +614,76 @@ def extract_heb_price_block_from_body(body_text):
     lines = [normalize_text(line) for line in body_text.splitlines()]
     lines = [line for line in lines if line]
 
-    # HEB discounted pages can show prices as separate nearby lines:
-    # Sale / $1.25 / $0.97 each
-    # The sale/current price should win over the crossed-out regular price.
+    # HEB sale pages can show prices across separate nearby lines:
+    # Sale / $1.25 / $0.97 / each
+    # We preserve both prices so price_raw can store the current price
+    # and old_price_raw can store the crossed-out price.
     for index, line in enumerate(lines):
         lower_line = line.lower()
 
         if lower_line not in {"sale", "coupon", "deal"} and "sale" not in lower_line:
             continue
 
-        nearby_prices = []
+        price_lines = [line]
+        nearby_price_lines = []
 
-        for next_index in range(index + 1, min(index + 8, len(lines))):
+        for next_index in range(index + 1, min(index + 10, len(lines))):
             next_line = normalize_text(lines[next_index])
 
-            if not next_line or "$" not in next_line:
+            if not next_line:
+                continue
+
+            # Stop if we hit clear non-price product sections after collecting sale prices.
+            if nearby_price_lines and next_line.lower() in {
+                "add to cart",
+                "add to list",
+                "find in-stock nearby",
+                "prices may vary between in-store, curbside, and delivery.",
+            }:
+                break
+
+            if "$" not in next_line:
                 continue
 
             if re.search(
-                r"^\$\s*\d+(?:\.\d{2})?\s*(?:each|ea|lb|oz|ct|count)?$",
+                r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*(?:each|ea|lb|oz|ct|count)?$",
                 next_line,
                 flags=re.IGNORECASE,
             ):
-                nearby_prices.append(next_line)
+                nearby_price_lines.append(next_line)
 
-        if nearby_prices:
-            return normalize_text(" ".join([line] + nearby_prices))
+            if len(nearby_price_lines) >= 2:
+                break
+
+        if nearby_price_lines:
+            return normalize_text(" ".join(price_lines + nearby_price_lines))
+
+    # HEB sale fallback for body text where the word Sale and prices are compressed together.
+    joined_text = normalize_text(" ".join(lines))
+
+    sale_block_match = re.search(
+        r"sale\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)(?:\s*(?:each|ea|lb|oz|ct|count))?",
+        joined_text,
+        flags=re.IGNORECASE,
+    )
+
+    if sale_block_match:
+        return normalize_text(sale_block_match.group(0))
 
     # Standard HEB pages.
     for index, line in enumerate(lines):
-        if re.search(r"^\$\s*\d+(?:\.\d{2})?\s*(?:each|ea)?$", line, flags=re.IGNORECASE):
+        if re.search(
+            r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*(?:each|ea)?$",
+            line,
+            flags=re.IGNORECASE,
+        ):
             price_lines = [line]
 
             for next_index in range(index + 1, min(index + 6, len(lines))):
                 next_line = lines[next_index]
 
                 if re.search(
-                    r"\(?\s*\$\s*\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|each|ea|ct|count|gal)\s*\)?",
+                    r"\(?\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|each|ea|ct|count|gal)\s*\)?",
                     next_line,
                     flags=re.IGNORECASE,
                 ):
@@ -642,7 +719,7 @@ def extract_heb_price_block(page):
     return None
 
 
-# Helper for Whole Foods price extraction
+# Helper for HEB price extraction
 def extract_heb_main_price(price_block_text):
     price_block_text = normalize_text(price_block_text)
 
@@ -650,14 +727,18 @@ def extract_heb_main_price(price_block_text):
         return None
 
     lower_text = price_block_text.lower()
-    dollar_matches = re.findall(r"\$\s*\d+(?:\.\d{2})?", price_block_text)
+    dollar_matches = re.findall(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_block_text)
 
     if not dollar_matches:
         return None
 
-    # Sale block example: Sale $1.25 $0.97 each
+    # HEB sale block example: Sale $1.25 $0.97 each.
     # The last dollar amount is the active sale price.
-    if ("sale" in lower_text or "coupon" in lower_text or "deal" in lower_text) and len(dollar_matches) >= 2:
+    if (
+        "sale" in lower_text
+        or "coupon" in lower_text
+        or "deal" in lower_text
+    ) and len(dollar_matches) >= 2:
         return dollar_matches[-1].replace(" ", "")
 
     return dollar_matches[0].replace(" ", "")
@@ -705,6 +786,15 @@ def extract_wholefoods_price_block_from_body(body_text):
         if re.search(r"^\(?\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)\s*\)?$", lower_line):
             continue
 
+        sale_same_line_match = re.search(
+            r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?\s+\$\s*(?!0\.00)\d+(?:\.\d{2})?(?:\s*\(\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)\s*\))?",
+            clean_line,
+            flags=re.IGNORECASE,
+        )
+
+        if sale_same_line_match:
+            return clean_line
+
         same_line_price_with_unit_match = re.search(
             r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*\(\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)\s*\)",
             clean_line,
@@ -748,6 +838,15 @@ def extract_wholefoods_price_block_from_body(body_text):
     joined_text = normalize_text(" ".join(lines))
 
     if joined_text:
+        sale_block_match = re.search(
+            r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s+\$\s*(?!0\.00)\d+(?:\.\d{2})?(?:\s*\(\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)\s*\))?",
+            joined_text,
+            flags=re.IGNORECASE,
+        )
+
+        if sale_block_match:
+            return normalize_text(sale_block_match.group(0))
+
         same_line_price_with_unit_match = re.search(
             r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*\(\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)\s*\)",
             joined_text,
@@ -835,12 +934,69 @@ def extract_wholefoods_price_block(page):
 
 
 # Sam's Club price extraction
-def extract_sams_club_price_block_from_body(body_text):
+def extract_sams_club_price_block_from_body(body_text, product_title=None):
     body_text = body_text or ""
     lines = [normalize_text(line) for line in body_text.splitlines()]
     lines = [line for line in lines if line]
 
-    # First priority: product price lines such as "$20.41 avg. price".
+    # Sam's Club pages include hidden/related product prices in the body text.
+    # Anchor extraction around the visible product title so we do not grab a stale/related price.
+    if product_title:
+        normalized_title = normalize_text(product_title).lower()
+        title_index = None
+
+        for index, line in enumerate(lines):
+            if normalize_text(line).lower() == normalized_title:
+                title_index = index
+                break
+
+        if title_index is not None:
+            title_scoped_lines = lines[title_index + 1:title_index + 35]
+            title_scoped_price_block = extract_sams_club_price_block_from_lines(title_scoped_lines)
+
+            if title_scoped_price_block:
+                return title_scoped_price_block
+
+    return extract_sams_club_price_block_from_lines(lines)
+
+
+# Helper function for Sam's Club price block extraction
+def extract_sams_club_price_block_from_lines(lines):
+    lines = [normalize_text(line) for line in lines if normalize_text(line)]
+
+    # Sale price on the same line, for example: "Now $12.72 $13.68".
+    for index, line in enumerate(lines):
+        clean_line = normalize_text(line)
+
+        if not clean_line or "$" not in clean_line:
+            continue
+
+        if is_bad_sams_price_candidate(clean_line):
+            continue
+
+        now_match = re.search(
+            r"now\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?",
+            clean_line,
+            flags=re.IGNORECASE,
+        )
+
+        if now_match:
+            price_lines = [normalize_text(now_match.group(0))]
+
+            for next_index in range(index + 1, min(index + 5, len(lines))):
+                next_line = normalize_text(lines[next_index])
+
+                if next_line and re.search(
+                    r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)",
+                    next_line,
+                    flags=re.IGNORECASE,
+                ):
+                    price_lines.append(next_line)
+                    break
+
+            return normalize_text(" ".join(price_lines))
+
+    # Average-weight product price, for example: "$28.14 avg. price".
     for index, line in enumerate(lines):
         clean_line = normalize_text(line)
 
@@ -854,15 +1010,6 @@ def extract_sams_club_price_block_from_body(body_text):
 
         if re.search(r"/\s*(?:lb|oz|ounce|count|ct|each|ea)\b", lower_line):
             continue
-
-        now_match = re.search(
-            r"now\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?",
-            clean_line,
-            flags=re.IGNORECASE,
-        )
-
-        if now_match:
-            return normalize_text(now_match.group(0))
 
         avg_price_match = re.search(
             r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?\s+avg\.\s*price$",
@@ -886,7 +1033,7 @@ def extract_sams_club_price_block_from_body(body_text):
 
             return normalize_text(" ".join(price_lines))
 
-    # Second priority: standard product price lines such as "$7.98".
+    # Standard product price, for example: "$22.68".
     for index, line in enumerate(lines):
         clean_line = normalize_text(line)
 
@@ -944,39 +1091,15 @@ def extract_sams_club_price_block_from_body(body_text):
         if product_price_before_unit_match:
             return normalize_text(product_price_before_unit_match.group(0))
 
-        sale_price_match = re.search(
-            r"now\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?",
-            joined_text,
-            flags=re.IGNORECASE,
-        )
-
-        if sale_price_match:
-            return normalize_text(sale_price_match.group(0))
-
-        simple_price_candidates = re.findall(
-            r"\$\s*(?!0\.00)\d+(?:\.\d{2})?",
-            joined_text,
-            flags=re.IGNORECASE,
-        )
-
-        for candidate in simple_price_candidates:
-            candidate_index = joined_text.find(candidate)
-            nearby_text = joined_text[candidate_index:candidate_index + 80].lower()
-
-            if "cart" in nearby_text or "subtotal" in nearby_text:
-                continue
-
-            if re.search(r"/\s*(?:lb|oz|ounce|count|ct|each|ea)\b", nearby_text):
-                continue
-
-            return normalize_text(candidate)
-
     return None
 
 
-def extract_sams_club_price_block(page):
+def extract_sams_club_price_block(page, product_title=None):
     body_text = get_body_text(page)
-    body_price_block = extract_sams_club_price_block_from_body(body_text)
+    body_price_block = extract_sams_club_price_block_from_body(
+        body_text,
+        product_title=product_title,
+    )
 
     if body_price_block:
         return body_price_block
@@ -994,7 +1117,10 @@ def extract_sams_club_price_block(page):
         value = safe_inner_text(page, selector)
 
         if value and "$" in value:
-            extracted_price = extract_sams_club_price_block_from_body(value)
+            extracted_price = extract_sams_club_price_block_from_body(
+                value,
+                product_title=product_title,
+            )
 
             if extracted_price:
                 return extracted_price
@@ -1006,27 +1132,6 @@ def extract_sams_club_price_block(page):
                 normalized_value.lower(),
             ):
                 return normalized_value
-
-    try:
-        dollar_elements = page.locator("text=/\\$\\s*(?!0\\.00)\\d+(?:\\.\\d{2})?/")
-        count = min(dollar_elements.count(), 20)
-
-        for index in range(count):
-            try:
-                text = normalize_text(dollar_elements.nth(index).inner_text(timeout=2000))
-
-                if not text or "$" not in text:
-                    continue
-
-                extracted_price = extract_sams_club_price_block_from_body(text)
-
-                if extracted_price:
-                    return extracted_price
-
-            except Exception:
-                continue
-    except Exception:
-        pass
 
     return None
 
@@ -1048,6 +1153,40 @@ def extract_wholefoods_main_price(price_block_text):
 
     return extract_main_price_from_text(price_block_text)
 
+# New function: extract_current_price_from_text
+def extract_current_price_from_text(price_block_text, store_key=None):
+    price_block_text = normalize_text(price_block_text)
+
+    if not price_block_text:
+        return None
+
+    lower_text = price_block_text.lower()
+    dollar_matches = re.findall(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_block_text)
+
+    if not dollar_matches:
+        return None
+
+    cleaned_matches = [match.replace(" ", "") for match in dollar_matches]
+
+    # HEB sale block example: "Sale $1.25 $0.97 each".
+    # The last price is the active sale price.
+    if store_key == "heb" and (
+        "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
+    ) and len(cleaned_matches) >= 2:
+        return cleaned_matches[-1]
+
+    # Sam's Club sale block example: "Now $12.72 $13.68".
+    # The first price is the active sale price.
+    if store_key == "sams_club" and "now" in lower_text:
+        return cleaned_matches[0]
+
+    # Whole Foods sale block example: "$4.66 $5.49 ($0.93 / ounce)".
+    # The first product price is the active current price.
+    if store_key == "whole_foods":
+        return cleaned_matches[0]
+
+    return cleaned_matches[0]
+
 
 def extract_product_fields(page, store_key):
     title = safe_inner_text(page, "h1")
@@ -1055,23 +1194,28 @@ def extract_product_fields(page, store_key):
 
     if store_key == "walmart":
         price_block_text = extract_walmart_price_block(page)
-        price = extract_main_price_from_text(price_block_text)
+        price = extract_current_price_from_text(price_block_text, store_key=store_key)
+        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
         price_context_source = f"{price_block_text or ''} {body_text or ''}"
     elif store_key == "heb":
         price_block_text = extract_heb_price_block(page)
         price = extract_heb_main_price(price_block_text)
+        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
         price_context_source = price_block_text
     elif store_key == "whole_foods":
         price_block_text = extract_wholefoods_price_block(page)
-        price = extract_wholefoods_main_price(price_block_text)
+        price = extract_current_price_from_text(price_block_text, store_key=store_key)
+        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
         price_context_source = price_block_text
     elif store_key == "sams_club":
-        price_block_text = extract_sams_club_price_block(page)
-        price = extract_main_price_from_text(price_block_text)
-        price_context_source = f"{price_block_text or ''} {body_text or ''}"
+        price_block_text = extract_sams_club_price_block(page, product_title=title)
+        price = extract_current_price_from_text(price_block_text, store_key=store_key)
+        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
+        price_context_source = price_block_text
     else:
         price_block_text = None
         price = None
+        old_price = None
         price_context_source = None
 
     unit_price = extract_unit_price_from_text(price_block_text) or extract_unit_price_from_text(body_text)
@@ -1083,7 +1227,7 @@ def extract_product_fields(page, store_key):
         price_block_text=price_block_text,
     )
 
-    return title, price, unit_price, price_block_text, price_context, availability
+    return title, price, old_price, unit_price, price_block_text, price_context, availability
 
 
 def build_base_result(row, store_name, scrape_session_id, attempt_count):
@@ -1096,6 +1240,7 @@ def build_base_result(row, store_name, scrape_session_id, attempt_count):
         "product_url": row.get("product_url"),
         "product_title_raw": None,
         "price_raw": None,
+        "old_price_raw": None,
         "unit_price_raw": None,
         "price_block_raw": None,
         "price_context_raw": None,
@@ -1123,10 +1268,11 @@ def scrape_product_once(page, row, store_key, store_name, scrape_session_id, att
             result["error_message"] = "Bot protection page detected"
             return result
 
-        title, price, unit_price, price_block_text, price_context, availability = extract_product_fields(page, store_key)
+        title, price, old_price, unit_price, price_block_text, price_context, availability = extract_product_fields(page, store_key)
 
         result["product_title_raw"] = title
         result["price_raw"] = price
+        result["old_price_raw"] = old_price
         result["unit_price_raw"] = unit_price
         result["price_block_raw"] = price_block_text
         result["price_context_raw"] = price_context
@@ -1135,6 +1281,7 @@ def scrape_product_once(page, row, store_key, store_name, scrape_session_id, att
         print(f"{store_name} title raw: {title}")
         print(f"{store_name} price block raw: {price_block_text}")
         print(f"{store_name} parsed price: {price}")
+        print(f"{store_name} parsed old price: {old_price}")
         print(f"{store_name} parsed unit price: {unit_price}")
         print(f"{store_name} price context: {price_context}")
         print(f"{store_name} availability: {availability}")
