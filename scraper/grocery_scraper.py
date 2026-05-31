@@ -10,14 +10,14 @@ from pandas.errors import EmptyDataError
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 
-MAX_RETRIES = 1
+MAX_RETRIES = 2
 PAGE_TIMEOUT_MS = 60000
 TEXT_TIMEOUT_MS = 10000
 PAGE_SETTLE_MS = 0
-RETRY_WAIT_MS = 3000
+RETRY_WAIT_MS = 30000
 
-MIN_PRODUCT_INTERVAL_SECONDS = 30
-MAX_PRODUCT_INTERVAL_SECONDS = 100
+MIN_PRODUCT_INTERVAL_SECONDS = 10
+MAX_PRODUCT_INTERVAL_SECONDS = 60
 MIN_PAGE_CLOSE_DELAY_SECONDS = 0
 MAX_PAGE_CLOSE_DELAY_SECONDS = 60
 
@@ -369,14 +369,31 @@ def extract_old_price_from_text(price_text, store_key=None):
 
     cleaned_matches = [match.replace(" ", "") for match in dollar_matches]
 
-    # Sale/coupon/deal blocks usually contain current and old prices together.
-    # Sam's Club example: "Now $12.72 $13.68" -> old price is $13.68.
-    # HEB example: "Sale $1.25 $0.97 each" -> old price is $1.25.
-    if store_key == "sams_club" and "now" in lower_text:
-        return cleaned_matches[1]
+    unit_price_pattern = re.compile(
+        r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*"
+        r"(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)\b",
+        flags=re.IGNORECASE,
+    )
 
-    if store_key == "walmart" and "now" in lower_text:
-        return cleaned_matches[1]
+    non_unit_prices = []
+
+    for match in re.finditer(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_text):
+        candidate = match.group(0).replace(" ", "")
+        nearby_text = price_text[match.start():match.end() + 20]
+
+        if unit_price_pattern.search(nearby_text):
+            continue
+
+        non_unit_prices.append(candidate)
+
+    # Sale/coupon/deal blocks usually contain current and old prices together.
+    # Sam's Club example: "Now $13.86 $14.77 $0.77/ea" -> old price is $14.77.
+    # HEB example: "Sale $1.25 $0.97 each" -> old price is $1.25.
+    if store_key == "sams_club" and "now" in lower_text and len(non_unit_prices) >= 2:
+        return non_unit_prices[1]
+
+    if store_key == "walmart" and "now" in lower_text and len(non_unit_prices) >= 2:
+        return non_unit_prices[1]
 
     if store_key == "heb" and (
         "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
@@ -386,14 +403,14 @@ def extract_old_price_from_text(price_text, store_key=None):
     # Whole Foods sale example:
     # "$4.66 $5.49 ($0.93 / ounce)"
     # The second standalone product price is the old crossed-out price.
-    if store_key == "whole_foods" and len(cleaned_matches) >= 2:
-        return cleaned_matches[1]
+    if store_key == "whole_foods" and len(non_unit_prices) >= 2:
+        return non_unit_prices[1]
 
-    if "was" in lower_text or "save" in lower_text or "off" in lower_text:
-        return cleaned_matches[1]
+    if ("was" in lower_text or "save" in lower_text or "off" in lower_text) and len(non_unit_prices) >= 2:
+        return non_unit_prices[1]
 
-    if "now" in lower_text and len(cleaned_matches) >= 2:
-        return cleaned_matches[1]
+    if "now" in lower_text and len(non_unit_prices) >= 2:
+        return non_unit_prices[1]
 
     return None
 
@@ -1152,11 +1169,12 @@ def extract_sams_club_price_block_from_body(body_text, product_title=None):
     return extract_sams_club_price_block_from_lines(lines)
 
 
-# Helper function for Sam's Club price block extraction
 def extract_sams_club_price_block_from_lines(lines):
     lines = [normalize_text(line) for line in lines if normalize_text(line)]
 
-    # Sale price on the same line, for example: "Now $12.72 $13.68".
+    # Sale price block, for example:
+    # "Now $13.86" followed by "$14.77", "$0.77/ea", "$0.91 off".
+    # Keep current price + old price + unit price together so old_price_raw does not accidentally become unit_price_raw.
     for index, line in enumerate(lines):
         clean_line = normalize_text(line)
 
@@ -1174,16 +1192,47 @@ def extract_sams_club_price_block_from_lines(lines):
 
         if now_match:
             price_lines = [normalize_text(now_match.group(0))]
+            same_line_prices = [match.replace(" ", "") for match in re.findall(
+                r"\$\s*(?!0\.00)\d+(?:\.\d{2})?",
+                clean_line,
+                flags=re.IGNORECASE,
+            )]
 
-            for next_index in range(index + 1, min(index + 5, len(lines))):
+            if len(same_line_prices) >= 2:
+                price_lines.append(same_line_prices[1])
+
+            for next_index in range(index + 1, min(index + 8, len(lines))):
                 next_line = normalize_text(lines[next_index])
 
-                if next_line and re.search(
+                if not next_line or "$" not in next_line:
+                    continue
+
+                if is_bad_sams_price_candidate(next_line):
+                    continue
+
+                next_lower_line = next_line.lower()
+
+                if "off" in next_lower_line or "save" in next_lower_line:
+                    continue
+
+                unit_price_match = re.search(
                     r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)",
                     next_line,
                     flags=re.IGNORECASE,
-                ):
-                    price_lines.append(next_line)
+                )
+
+                standalone_old_price_match = re.search(
+                    r"^\$\s*(?!0\.00)\d+(?:\.\d{2})?$",
+                    next_line,
+                    flags=re.IGNORECASE,
+                )
+
+                if standalone_old_price_match and len(price_lines) == 1:
+                    price_lines.append(normalize_text(standalone_old_price_match.group(0)))
+                    continue
+
+                if unit_price_match:
+                    price_lines.append(normalize_text(unit_price_match.group(0)))
                     break
 
             return normalize_text(" ".join(price_lines))
@@ -1274,6 +1323,17 @@ def extract_sams_club_price_block_from_lines(lines):
     joined_text = normalize_text(" ".join(lines))
 
     if joined_text:
+        sale_price_with_old_and_unit_match = re.search(
+            r"now\s*\$\s*(?!0\.00)\d+(?:\.\d{2})?\s+"
+            r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s+"
+            r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)",
+            joined_text,
+            flags=re.IGNORECASE,
+        )
+
+        if sale_price_with_old_and_unit_match:
+            return normalize_text(sale_price_with_old_and_unit_match.group(0))
+
         product_price_before_unit_match = re.search(
             r"(\$\s*(?!0\.00)\d+(?:\.\d{2})?)(?:\s+avg\.\s*price)?\s+\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|ounce|count|ct|each|ea)",
             joined_text,
@@ -1511,7 +1571,12 @@ def scrape_with_retries(page, row, store_key, store_name, scrape_session_id):
         if result["status"] == BLOCKED_STATUS:
             return result
 
-        page.wait_for_timeout(RETRY_WAIT_MS)
+        if attempt_count < MAX_RETRIES:
+            print(
+                f"{store_name} scrape failed on attempt {attempt_count}. "
+                f"Waiting {RETRY_WAIT_MS / 1000:.0f} seconds before retrying."
+            )
+            page.wait_for_timeout(RETRY_WAIT_MS)
 
     return last_result
 
