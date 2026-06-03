@@ -19,7 +19,7 @@ RETRY_WAIT_MS = 30000
 MIN_PRODUCT_INTERVAL_SECONDS = 10
 MAX_PRODUCT_INTERVAL_SECONDS = 60
 MIN_PAGE_CLOSE_DELAY_SECONDS = 0
-MAX_PAGE_CLOSE_DELAY_SECONDS = 60
+MAX_PAGE_CLOSE_DELAY_SECONDS = 30
 
 SCRAPED_COLUMN = "scraped"
 LAST_SCRAPE_STATUS_COLUMN = "last_scrape_status"
@@ -30,6 +30,18 @@ FAILED_STATUS = "failed"
 SUCCESS_STATUS = "success"
 
 SKIP_ROUND_IF_FAILED = False
+
+WALMART_SCRAPE = True
+HEB_SCRAPE = True
+WHOLE_FOODS_SCRAPE = True
+SAMS_CLUB_SCRAPE = True
+
+STORE_SCRAPE_FLAGS = {
+    "walmart": WALMART_SCRAPE,
+    "heb": HEB_SCRAPE,
+    "whole_foods": WHOLE_FOODS_SCRAPE,
+    "sams_club": SAMS_CLUB_SCRAPE,
+}
 
 BLOCK_INDICATORS = [
     "Robot or human",
@@ -235,14 +247,6 @@ def close_page_after_random_delay(page):
         page.close()
 
 
-# Helper function to replace a scraped page with a blank tab
-def replace_scraped_page_with_blank_tab(context, page):
-    blank_page = context.new_page()
-    blank_page.goto("about:blank")
-
-    close_page_after_random_delay(page)
-
-    return blank_page
 
 
 def append_row_to_csv(row, file_path, columns):
@@ -362,54 +366,49 @@ def extract_old_price_from_text(price_text, store_key=None):
         return None
 
     lower_text = price_text.lower()
-    dollar_matches = re.findall(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_text)
-
-    if len(dollar_matches) < 2:
-        return None
-
-    cleaned_matches = [match.replace(" ", "") for match in dollar_matches]
-
-    unit_price_pattern = re.compile(
-        r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*"
-        r"(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)\b",
-        flags=re.IGNORECASE,
-    )
-
     non_unit_prices = []
 
     for match in re.finditer(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_text):
         candidate = match.group(0).replace(" ", "")
-        nearby_text = price_text[match.start():match.end() + 20]
+        text_after_candidate = price_text[match.end():match.end() + 20]
 
-        if unit_price_pattern.search(nearby_text):
+        # Only skip the candidate if this exact price is directly followed by a unit marker.
+        # Example to skip: "$0.97/ea".
+        # Example not to skip: "$21.48 $0.97/ea".
+        if re.match(
+            r"\s*/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)\b",
+            text_after_candidate,
+            flags=re.IGNORECASE,
+        ):
             continue
 
         non_unit_prices.append(candidate)
 
+    if len(non_unit_prices) < 2:
+        return None
+
     # Sale/coupon/deal blocks usually contain current and old prices together.
     # Sam's Club example: "Now $13.86 $14.77 $0.77/ea" -> old price is $14.77.
+    # Walmart example: "Now $378.00 $424.00" -> old price is $424.00.
     # HEB example: "Sale $1.25 $0.97 each" -> old price is $1.25.
-    if store_key == "sams_club" and "now" in lower_text and len(non_unit_prices) >= 2:
+    if store_key == "sams_club" and "now" in lower_text:
         return non_unit_prices[1]
 
-    if store_key == "walmart" and "now" in lower_text and len(non_unit_prices) >= 2:
+    if store_key == "walmart" and "now" in lower_text:
         return non_unit_prices[1]
 
     if store_key == "heb" and (
         "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
     ):
-        return cleaned_matches[0]
+        return non_unit_prices[0]
 
-    # Whole Foods sale example:
-    # "$4.66 $5.49 ($0.93 / ounce)"
-    # The second standalone product price is the old crossed-out price.
-    if store_key == "whole_foods" and len(non_unit_prices) >= 2:
+    if store_key == "whole_foods":
         return non_unit_prices[1]
 
-    if ("was" in lower_text or "save" in lower_text or "off" in lower_text) and len(non_unit_prices) >= 2:
+    if "was" in lower_text or "save" in lower_text or "off" in lower_text:
         return non_unit_prices[1]
 
-    if "now" in lower_text and len(non_unit_prices) >= 2:
+    if "now" in lower_text:
         return non_unit_prices[1]
 
     return None
@@ -1572,10 +1571,7 @@ def scrape_with_retries(page, row, store_key, store_name, scrape_session_id):
             return result
 
         if attempt_count < MAX_RETRIES:
-            print(
-                f"{store_name} scrape failed on attempt {attempt_count}. "
-                f"Waiting {RETRY_WAIT_MS / 1000:.0f} seconds before retrying."
-            )
+            print(f"Retrying failed {store_name} scrape in {RETRY_WAIT_MS / 1000:.0f} second(s).")
             page.wait_for_timeout(RETRY_WAIT_MS)
 
     return last_result
@@ -1674,12 +1670,7 @@ def scrape_one_product_for_store(
         browser = playwright.chromium.connect_over_cdp(REMOTE_DEBUGGING_URL)
         print("Connected to existing personal Chrome session through remote debugging.")
         context = browser.contexts[0]
-        existing_pages = context.pages
-
-        if existing_pages:
-            page = existing_pages[0]
-        else:
-            page = context.new_page()
+        page = context.new_page()
         using_remote_debugging_chrome = True
 
     elif USE_PERSONAL_CHROME_PROFILE:
@@ -1748,22 +1739,13 @@ def scrape_one_product_for_store(
         return "failed"
 
     finally:
-        if using_remote_debugging_chrome:
-            print("Remote Chrome mode detected. Opening a blank tab before closing the scraped page.")
-
-            try:
-                if page is not None and not page.is_closed():
-                    replace_scraped_page_with_blank_tab(context, page)
-            except Exception as error:
-                print(f"Could not replace scraped page with a blank tab: {error}")
-
-        else:
-            try:
-                if page is not None and not page.is_closed():
-                    replace_scraped_page_with_blank_tab(browser, page)
-            except Exception:
+        try:
+            if page is not None and not page.is_closed():
                 close_page_after_random_delay(page)
+        except Exception as error:
+            print(f"Could not close scraped page cleanly: {error}")
 
+        if not using_remote_debugging_chrome:
             browser.close()
 
 
@@ -1778,6 +1760,10 @@ def main():
             attempted_store_count = 0
 
             for store_key, config in STORES.items():
+                if not STORE_SCRAPE_FLAGS.get(store_key, True):
+                    print(f"Skipping {config['store_name']} because its scrape flag is False.")
+                    continue
+
                 if skip_cycles_remaining.get(store_key, 0) > 0:
                     print(f"Skipping {config['store_name']} for this cycle after a previous failure/block.")
                     skip_cycles_remaining[store_key] -= 1
