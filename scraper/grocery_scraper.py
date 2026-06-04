@@ -24,6 +24,8 @@ MAX_PAGE_CLOSE_DELAY_SECONDS = 30
 SCRAPED_COLUMN = "scraped"
 LAST_SCRAPE_STATUS_COLUMN = "last_scrape_status"
 LAST_SCRAPE_DATETIME_COLUMN = "last_scrape_datetime"
+FAILED_SCRAPE_COUNT_COLUMN = "failed_scrape_count"
+MAX_FAILED_SCRAPE_COUNT = 3
 
 BLOCKED_STATUS = "blocked"
 FAILED_STATUS = "failed"
@@ -177,8 +179,16 @@ def normalize_scraped_flags(urls_df):
     if LAST_SCRAPE_DATETIME_COLUMN not in urls_df.columns:
         urls_df[LAST_SCRAPE_DATETIME_COLUMN] = None
 
+    if FAILED_SCRAPE_COUNT_COLUMN not in urls_df.columns:
+        urls_df[FAILED_SCRAPE_COUNT_COLUMN] = 0
+
     urls_df[LAST_SCRAPE_STATUS_COLUMN] = urls_df[LAST_SCRAPE_STATUS_COLUMN].astype("string")
     urls_df[LAST_SCRAPE_DATETIME_COLUMN] = urls_df[LAST_SCRAPE_DATETIME_COLUMN].astype("string")
+    urls_df[FAILED_SCRAPE_COUNT_COLUMN] = (
+        pd.to_numeric(urls_df[FAILED_SCRAPE_COUNT_COLUMN], errors="coerce")
+        .fillna(0)
+        .astype(int)
+    )
 
     urls_df[SCRAPED_COLUMN] = (
         urls_df[SCRAPED_COLUMN]
@@ -216,6 +226,33 @@ def mark_row_progress(urls_df, row_index, result, input_file):
 
     if result["status"] == SUCCESS_STATUS:
         urls_df.loc[row_index, SCRAPED_COLUMN] = True
+        urls_df.loc[row_index, FAILED_SCRAPE_COUNT_COLUMN] = 0
+
+    elif result["status"] == FAILED_STATUS:
+        current_failed_count = urls_df.loc[row_index, FAILED_SCRAPE_COUNT_COLUMN]
+
+        if pd.isna(current_failed_count):
+            current_failed_count = 0
+
+        failed_count = int(current_failed_count) + 1
+        urls_df.loc[row_index, FAILED_SCRAPE_COUNT_COLUMN] = failed_count
+
+        if failed_count >= MAX_FAILED_SCRAPE_COUNT:
+            urls_df.loc[row_index, SCRAPED_COLUMN] = True
+            urls_df.loc[row_index, LAST_SCRAPE_STATUS_COLUMN] = FAILED_STATUS
+            print(
+                f"Marked row as scraped after {failed_count} failed scrape attempt(s): "
+                f"{result.get('canonical_name')}"
+            )
+        else:
+            urls_df.loc[row_index, SCRAPED_COLUMN] = False
+            print(
+                f"Failed scrape count for {result.get('canonical_name')}: "
+                f"{failed_count}/{MAX_FAILED_SCRAPE_COUNT}"
+            )
+
+    elif result["status"] == BLOCKED_STATUS:
+        urls_df.loc[row_index, SCRAPED_COLUMN] = False
 
     save_url_progress(urls_df, input_file)
 
@@ -1730,11 +1767,12 @@ def scrape_one_product_for_store(
         else:
             print(f"{store_name} will not be skipped because SKIP_ROUND_IF_FAILED is False.")
 
-        skipped_row_indexes_by_store.setdefault(store_key, set()).add(row_index)
-        print(
-            f"{canonical_name} will be skipped for the rest of this run, "
-            "but it can be retried next time you run the scraper."
-        )
+        if not bool(urls_df.loc[row_index, SCRAPED_COLUMN]):
+            skipped_row_indexes_by_store.setdefault(store_key, set()).add(row_index)
+            print(
+                f"{canonical_name} will be skipped for the rest of this run, "
+                "but it can be retried next time you run the scraper."
+            )
 
         return "failed"
 
