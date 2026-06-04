@@ -435,7 +435,10 @@ def extract_old_price_from_text(price_text, store_key=None):
         return non_unit_prices[1]
 
     if store_key == "heb" and (
-        "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
+        "sale" in lower_text
+        or "coupon" in lower_text
+        or "deal" in lower_text
+        or "price cut" in lower_text
     ):
         return non_unit_prices[0]
 
@@ -506,6 +509,9 @@ def classify_price_context(price_text):
 
     if "sale" in lower_text:
         context_flags.append("sale_price")
+
+    if "price cut" in lower_text:
+        context_flags.append("price_cut")
 
     if "coupon" in lower_text or "deal" in lower_text:
         context_flags.append("discounted")
@@ -866,7 +872,11 @@ def extract_heb_price_block_from_body(body_text):
     for index, line in enumerate(lines):
         lower_line = line.lower()
 
-        if lower_line not in {"sale", "coupon", "deal"} and "sale" not in lower_line:
+        if (
+            lower_line not in {"sale", "coupon", "deal", "price cut"}
+            and "sale" not in lower_line
+            and "price cut" not in lower_line
+        ):
             continue
 
         price_lines = [line]
@@ -907,7 +917,7 @@ def extract_heb_price_block_from_body(body_text):
     joined_text = normalize_text(" ".join(lines))
 
     sale_block_match = re.search(
-        r"sale\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)(?:\s*(?:each|ea|lb|oz|ct|count))?",
+        r"(?:sale|price\s+cut)\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)\s+(\$\s*(?!0\.00)\d+(?:\.\d{2})?)(?:\s*(?:each|ea|lb|oz|ct|count))?",
         joined_text,
         flags=re.IGNORECASE,
     )
@@ -983,6 +993,7 @@ def extract_heb_main_price(price_block_text):
         "sale" in lower_text
         or "coupon" in lower_text
         or "deal" in lower_text
+        or "price cut" in lower_text
     ) and len(dollar_matches) >= 2:
         return dollar_matches[-1].replace(" ", "")
 
@@ -1459,7 +1470,10 @@ def extract_current_price_from_text(price_block_text, store_key=None):
     # HEB sale block example: "Sale $1.25 $0.97 each".
     # The last price is the active sale price.
     if store_key == "heb" and (
-        "sale" in lower_text or "coupon" in lower_text or "deal" in lower_text
+        "sale" in lower_text
+        or "coupon" in lower_text
+        or "deal" in lower_text
+        or "price cut" in lower_text
     ) and len(cleaned_matches) >= 2:
         return cleaned_matches[-1]
 
