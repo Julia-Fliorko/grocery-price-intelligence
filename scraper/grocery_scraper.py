@@ -336,50 +336,32 @@ def append_result_files(result, file_paths, processed_file):
 
 
 
-def is_bad_sams_price_candidate(text):
-    text = normalize_text(text)
+_BAD_PRICE_TOKENS_BASE = ["$0.00", "cart", "subtotal", "checkout", "estimated total"]
 
+_BAD_PRICE_TOKENS_BY_STORE = {
+    "sams_club": _BAD_PRICE_TOKENS_BASE + ["savings", "reorder"],
+    "walmart": _BAD_PRICE_TOKENS_BASE + [
+        "protection plan", "allstate", "onepay", "/mo", "per month", "as low as",
+    ],
+    "whole_foods": _BAD_PRICE_TOKENS_BASE,
+}
+
+
+def is_bad_price_candidate(text, store_key):
+    text = normalize_text(text)
     if not text:
         return True
-
     lower_text = text.lower()
+    return any(token in lower_text for token in _BAD_PRICE_TOKENS_BY_STORE.get(store_key, _BAD_PRICE_TOKENS_BASE))
 
-    bad_values = [
-        "$0.00",
-        "cart",
-        "subtotal",
-        "savings",
-        "reorder",
-        "checkout",
-        "estimated total",
-    ]
 
-    return any(bad_value in lower_text for bad_value in bad_values)
+# Convenience aliases kept for call-site clarity
+def is_bad_sams_price_candidate(text):
+    return is_bad_price_candidate(text, "sams_club")
 
 
 def is_bad_walmart_price_candidate(text):
-    text = normalize_text(text)
-
-    if not text:
-        return True
-
-    lower_text = text.lower()
-
-    bad_values = [
-        "$0.00",
-        "cart",
-        "subtotal",
-        "checkout",
-        "estimated total",
-        "protection plan",
-        "allstate",
-        "onepay",
-        "/mo",
-        "per month",
-        "as low as",
-    ]
-
-    return any(bad_value in lower_text for bad_value in bad_values)
+    return is_bad_price_candidate(text, "walmart")
 
 
 def extract_main_price_from_text(price_text):
@@ -523,168 +505,114 @@ def classify_price_context(price_text):
 
 
 
+def _combined_lower(body_text, price_block_text):
+    return f"{(body_text or '').lower()} {(price_block_text or '').lower()}"
+
+
 def extract_walmart_availability(body_text, price=None, price_block_text=None):
-    body_text = body_text or ""
-    price_block_text = price_block_text or ""
-    combined_text_lower = f"{body_text.lower()} {price_block_text.lower()}"
+    combined = _combined_lower(body_text, price_block_text)
 
     # Walmart can contain generic hidden/background "unavailable" text even when the main product is purchasable.
     # Strong positive buying signals must win first.
-    if "add to cart" in combined_text_lower:
+    if "add to cart" in combined:
         return "in_stock"
-
-    if "one-time purchase" in combined_text_lower:
+    if "one-time purchase" in combined:
         return "in_stock"
-
-    if "subscribe" in combined_text_lower and price:
+    if "subscribe" in combined and price:
         return "in_stock"
-
-    if "out of stock" in combined_text_lower:
+    if "out of stock" in combined:
         return "out_of_stock"
-
-    if "sold out" in combined_text_lower:
+    if "sold out" in combined:
         return "sold_out"
-
-    if "currently unavailable" in combined_text_lower:
+    if "currently unavailable" in combined:
         return "unavailable"
-
-    if "not available" in combined_text_lower:
+    if "not available" in combined:
         return "unavailable"
-
-    if "pickup" in combined_text_lower or "delivery" in combined_text_lower or "shipping" in combined_text_lower:
+    if "pickup" in combined or "delivery" in combined or "shipping" in combined:
         return "likely_in_stock"
-
     return "unknown"
 
 
 def extract_heb_availability(body_text, price=None, price_block_text=None):
-    body_text = body_text or ""
-    price_block_text = price_block_text or ""
-    combined_text_lower = f"{body_text.lower()} {price_block_text.lower()}"
+    combined = _combined_lower(body_text, price_block_text)
 
-    if "out of stock" in combined_text_lower:
+    if "out of stock" in combined:
         return "out_of_stock"
-
-    if "sold out" in combined_text_lower:
+    if "sold out" in combined:
         return "sold_out"
-
-    if "currently unavailable" in combined_text_lower:
+    if "currently unavailable" in combined:
         return "unavailable"
-
-    if "unavailable" in combined_text_lower or "not available" in combined_text_lower:
+    if "unavailable" in combined or "not available" in combined:
         return "unavailable"
-
-    if "add to cart" in combined_text_lower or "add to basket" in combined_text_lower:
+    if "add to cart" in combined or "add to basket" in combined:
         return "in_stock"
-
-    if "pickup" in combined_text_lower or "delivery" in combined_text_lower or "curbside" in combined_text_lower:
+    if "pickup" in combined or "delivery" in combined or "curbside" in combined:
         return "likely_in_stock"
-
     return "unknown"
 
 
 def extract_wholefoods_availability(body_text, price=None, price_block_text=None):
-    body_text = body_text or ""
-    price_block_text = price_block_text or ""
-    combined_text_lower = f"{body_text.lower()} {price_block_text.lower()}"
+    combined = _combined_lower(body_text, price_block_text)
 
     # Whole Foods can show disabled Add to Cart states, so explicit unavailable signals win first.
-    if re.search(r"\b0\.00\b", combined_text_lower):
+    if re.search(r"\b0\.00\b", combined):
         return "out_of_stock"
-
-    if "currently unavailable" in combined_text_lower:
+    if "currently unavailable" in combined:
         return "out_of_stock"
-
-    if "currently not sold" in combined_text_lower:
+    if "currently not sold" in combined:
         return "out_of_stock"
-
-    if "unavailable for delivery" in combined_text_lower:
+    if "unavailable for delivery" in combined:
         return "out_of_stock"
-
-    if "out of stock" in combined_text_lower:
+    if "out of stock" in combined:
         return "out_of_stock"
-
-    if "sold out" in combined_text_lower:
+    if "sold out" in combined:
         return "sold_out"
-
-    if "add to cart" in combined_text_lower or "add to basket" in combined_text_lower:
-        if price:
-            return "in_stock"
+    if "add to cart" in combined or "add to basket" in combined:
+        return "in_stock" if price else "likely_in_stock"
+    if "snap ebt eligible" in combined:
         return "likely_in_stock"
-
-    if "snap ebt eligible" in combined_text_lower:
+    if "pickup" in combined or "delivery" in combined:
         return "likely_in_stock"
-
-    if "pickup" in combined_text_lower or "delivery" in combined_text_lower:
-        return "likely_in_stock"
-
     return "unknown"
 
 
 # Sam's Club availability extraction
 def extract_sams_club_availability(body_text, price=None, price_block_text=None):
-    body_text = body_text or ""
-    price_block_text = price_block_text or ""
-    combined_text_lower = f"{body_text.lower()} {price_block_text.lower()}"
+    combined = _combined_lower(body_text, price_block_text)
 
     # Sam's Club can show "Shipping out of stock" while Pickup/Delivery are still available.
     # Strong purchasability signals must win over shipping-only unavailable text.
-    if price and "add to cart" in combined_text_lower:
+    if price and "add to cart" in combined:
         return "in_stock"
-
-    if price and "pickup" in combined_text_lower:
+    if price and "pickup" in combined:
         return "in_stock"
-
-    if price and "delivery" in combined_text_lower:
+    if price and "delivery" in combined:
         return "in_stock"
-
-    if "sold out" in combined_text_lower:
+    if "sold out" in combined:
         return "sold_out"
-
-    if "out of stock" in combined_text_lower and not price:
+    if "out of stock" in combined and not price:
         return "out_of_stock"
-
-    if "not available" in combined_text_lower and not price:
+    if "not available" in combined and not price:
         return "unavailable"
-
-    if "shipping not available" in combined_text_lower and price:
+    if "shipping not available" in combined and price:
         return "likely_in_stock"
-
     if price:
         return "likely_in_stock"
-
     return "unknown"
 
 
+_AVAILABILITY_EXTRACTORS = {
+    "walmart": extract_walmart_availability,
+    "heb": extract_heb_availability,
+    "whole_foods": extract_wholefoods_availability,
+    "sams_club": extract_sams_club_availability,
+}
+
+
 def extract_availability_from_text(body_text, store_key, price=None, price_block_text=None):
-    if store_key == "walmart":
-        return extract_walmart_availability(
-            body_text,
-            price=price,
-            price_block_text=price_block_text,
-        )
-
-    if store_key == "heb":
-        return extract_heb_availability(
-            body_text,
-            price=price,
-            price_block_text=price_block_text,
-        )
-
-    if store_key == "whole_foods":
-        return extract_wholefoods_availability(
-            body_text,
-            price=price,
-            price_block_text=price_block_text,
-        )
-
-    if store_key == "sams_club":
-        return extract_sams_club_availability(
-            body_text,
-            price=price,
-            price_block_text=price_block_text,
-        )
-
+    extractor = _AVAILABILITY_EXTRACTORS.get(store_key)
+    if extractor:
+        return extractor(body_text, price=price, price_block_text=price_block_text)
     return "unknown"
 
 
@@ -974,51 +902,16 @@ def extract_heb_price_block(page):
     return None
 
 
-# Helper for HEB price extraction
+# Helper for HEB price extraction — delegates to the unified extract_current_price_from_text.
+# Kept as a named alias so existing call-sites remain readable.
 def extract_heb_main_price(price_block_text):
-    price_block_text = normalize_text(price_block_text)
-
-    if not price_block_text:
-        return None
-
-    lower_text = price_block_text.lower()
-    dollar_matches = re.findall(r"\$\s*(?!0\.00)\d+(?:\.\d{2})?", price_block_text)
-
-    if not dollar_matches:
-        return None
-
-    # HEB sale block example: Sale $1.25 $0.97 each.
-    # The last dollar amount is the active sale price.
-    if (
-        "sale" in lower_text
-        or "coupon" in lower_text
-        or "deal" in lower_text
-        or "price cut" in lower_text
-    ) and len(dollar_matches) >= 2:
-        return dollar_matches[-1].replace(" ", "")
-
-    return dollar_matches[0].replace(" ", "")
+    return extract_current_price_from_text(price_block_text, store_key="heb")
 
 
 
 # Helper for Whole Foods price extraction
 def is_bad_wholefoods_price_candidate(text):
-    text = normalize_text(text)
-
-    if not text:
-        return True
-
-    lower_text = text.lower()
-
-    bad_values = [
-        "$0.00",
-        "cart",
-        "subtotal",
-        "checkout",
-        "estimated total",
-    ]
-
-    return any(bad_value in lower_text for bad_value in bad_values)
+    return is_bad_price_candidate(text, "whole_foods")
 
 
 def extract_wholefoods_price_block_from_body(body_text):
@@ -1493,38 +1386,25 @@ def extract_current_price_from_text(price_block_text, store_key=None):
     return cleaned_matches[0]
 
 
+_PRICE_BLOCK_EXTRACTORS = {
+    "walmart": lambda page, title: extract_walmart_price_block(page, product_title=title),
+    "heb": lambda page, title: extract_heb_price_block(page),
+    "whole_foods": lambda page, title: extract_wholefoods_price_block(page),
+    "sams_club": lambda page, title: extract_sams_club_price_block(page, product_title=title),
+}
+
+
 def extract_product_fields(page, store_key):
     title = safe_inner_text(page, "h1")
     body_text = get_body_text(page)
 
-    if store_key == "walmart":
-        price_block_text = extract_walmart_price_block(page, product_title=title)
-        price = extract_current_price_from_text(price_block_text, store_key=store_key)
-        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
-        price_context_source = price_block_text
-    elif store_key == "heb":
-        price_block_text = extract_heb_price_block(page)
-        price = extract_heb_main_price(price_block_text)
-        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
-        price_context_source = price_block_text
-    elif store_key == "whole_foods":
-        price_block_text = extract_wholefoods_price_block(page)
-        price = extract_current_price_from_text(price_block_text, store_key=store_key)
-        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
-        price_context_source = price_block_text
-    elif store_key == "sams_club":
-        price_block_text = extract_sams_club_price_block(page, product_title=title)
-        price = extract_current_price_from_text(price_block_text, store_key=store_key)
-        old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
-        price_context_source = price_block_text
-    else:
-        price_block_text = None
-        price = None
-        old_price = None
-        price_context_source = None
+    extractor = _PRICE_BLOCK_EXTRACTORS.get(store_key)
+    price_block_text = extractor(page, title) if extractor else None
 
+    price = extract_current_price_from_text(price_block_text, store_key=store_key)
+    old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
     unit_price = extract_unit_price_from_text(price_block_text) or extract_unit_price_from_text(body_text)
-    price_context = classify_price_context(price_context_source)
+    price_context = classify_price_context(price_block_text)
     availability = extract_availability_from_text(
         body_text,
         store_key,
@@ -1611,19 +1491,60 @@ def scrape_product_once(page, row, store_key, store_name, scrape_session_id, att
 def scrape_with_retries(page, row, store_key, store_name, scrape_session_id):
     last_result = None
 
-    for attempt_count in range(1, MAX_RETRIES + 1):
-        result = scrape_product_once(page, row, store_key, store_name, scrape_session_id, attempt_count)
+    for attempt_number in range(1, MAX_RETRIES + 1):
+        print(f"{store_name} scrape attempt {attempt_number}/{MAX_RETRIES}.")
+
+        result = scrape_product_once(
+            page,
+            row,
+            store_key,
+            store_name,
+            scrape_session_id,
+            attempt_number,
+        )
+
         last_result = result
 
         if result["status"] == SUCCESS_STATUS:
             return result
 
-        if result["status"] == BLOCKED_STATUS:
-            return result
+        if attempt_number < MAX_RETRIES:
+            if result["status"] == BLOCKED_STATUS:
+                print(
+                    f"Attempt {attempt_number} was blocked for {store_name}. "
+                    f"Retrying same product in {RETRY_WAIT_MS / 1000:.0f} second(s)."
+                )
+            else:
+                print(
+                    f"Attempt {attempt_number} failed for {store_name}. "
+                    f"Retrying same product in {RETRY_WAIT_MS / 1000:.0f} second(s)."
+                )
 
-        if attempt_count < MAX_RETRIES:
-            print(f"Retrying failed {store_name} scrape in {RETRY_WAIT_MS / 1000:.0f} second(s).")
             page.wait_for_timeout(RETRY_WAIT_MS)
+
+    if last_result is None:
+        last_result = build_base_result(
+            row,
+            store_name,
+            scrape_session_id,
+            attempt_count=MAX_RETRIES,
+        )
+        last_result["status"] = FAILED_STATUS
+        last_result["error_message"] = "Scrape failed before an attempt result was created"
+
+    last_result["attempt_count"] = MAX_RETRIES
+
+    if last_result["status"] == BLOCKED_STATUS:
+        print(
+            f"All {MAX_RETRIES} attempts were blocked for {store_name}. "
+            "Moving on without counting this as a failed product scrape."
+        )
+    else:
+        print(
+            f"All {MAX_RETRIES} attempts failed for {store_name}. "
+            "Recording as one failed scrape event."
+        )
+        last_result["status"] = FAILED_STATUS
 
     return last_result
 
@@ -1764,31 +1685,27 @@ def scrape_one_product_for_store(
             print(f"🟢 SCRAPED: {store_name} | {canonical_name}")
             return "success"
 
-        if result["status"] == BLOCKED_STATUS:
-            print(f"🔴 BLOCKED: {store_name} | {canonical_name}")
+        # Both BLOCKED and FAILED share the same skip-cycle and row-skip logic.
+        is_blocked = result["status"] == BLOCKED_STATUS
+        outcome_label = "BLOCKED" if is_blocked else "FAILED"
+        outcome_key = "blocked" if is_blocked else "failed"
+        extra = "" if is_blocked else f" | {result['error_message']}"
 
-            if SKIP_ROUND_IF_FAILED:
-                print(f"{store_name} will be skipped for one full cycle.")
-            else:
-                print(f"{store_name} will not be skipped because SKIP_ROUND_IF_FAILED is False.")
-
-            return "blocked"
-
-        print(f"🔴 FAILED: {store_name} | {canonical_name} | {result['error_message']}")
+        print(f"🔴 {outcome_label}: {store_name} | {canonical_name}{extra}")
 
         if SKIP_ROUND_IF_FAILED:
-            print(f"{store_name} will be skipped for one full cycle because this scrape failed.")
+            print(f"{store_name} will be skipped for one full cycle.")
         else:
             print(f"{store_name} will not be skipped because SKIP_ROUND_IF_FAILED is False.")
 
         if not bool(urls_df.loc[row_index, SCRAPED_COLUMN]):
             skipped_row_indexes_by_store.setdefault(store_key, set()).add(row_index)
             print(
-                f"{canonical_name} will be skipped for the rest of this run, "
-                "but it can be retried next time you run the scraper."
+                f"{canonical_name} already received {MAX_RETRIES} attempt(s) in this run. "
+                "It will be skipped for the rest of this run, but it can be retried next time you run the scraper."
             )
 
-        return "failed"
+        return outcome_key
 
     finally:
         try:
