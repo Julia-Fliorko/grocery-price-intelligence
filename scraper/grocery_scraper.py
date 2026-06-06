@@ -69,6 +69,8 @@ RAW_COLUMNS = [
     "price_raw",
     "old_price_raw",
     "unit_price_raw",
+    "coupon_text_raw",
+    "coupon_value_raw",
     "price_block_raw",
     "price_context_raw",
     "availability_raw",
@@ -88,11 +90,95 @@ PROCESSED_COLUMNS = [
     "price_raw",
     "old_price_raw",
     "unit_price_raw",
+    "coupon_text_raw",
+    "coupon_value_raw",
     "price_block_raw",
     "price_context_raw",
     "availability_raw",
     "status",
 ]
+# New function for extracting HEB coupon info
+
+def extract_heb_coupon_info(body_text):
+    body_text = body_text or ""
+    lines = [normalize_text(line) for line in body_text.splitlines()]
+    lines = [line for line in lines if line]
+
+    coupon_heading_indexes = [
+        index for index, line in enumerate(lines)
+        if line.lower() == "coupon"
+    ]
+
+    for coupon_heading_index in coupon_heading_indexes:
+        coupon_lines = lines[coupon_heading_index + 1:coupon_heading_index + 12]
+
+        coupon_value = None
+        coupon_text = None
+
+        for index, line in enumerate(coupon_lines):
+            lower_line = line.lower()
+
+            value_match = re.search(
+                r"(?:\d+\s*for\s*\$\s*\d+(?:\.\d{2})?|\d+%\s*off|\$\s*\d+(?:\.\d{2})?\s*off)",
+                line,
+                flags=re.IGNORECASE,
+            )
+
+            if value_match and coupon_value is None:
+                coupon_value = normalize_text(value_match.group(0))
+
+                if (
+                    "expires" not in lower_line
+                    and "unlimited use" not in lower_line
+                    and lower_line != coupon_value.lower()
+                ):
+                    coupon_text = line
+
+                for next_line in coupon_lines[index + 1:index + 4]:
+                    next_lower_line = next_line.lower()
+
+                    if "expires" in next_lower_line:
+                        continue
+
+                    if "unlimited use" in next_lower_line:
+                        continue
+
+                    if next_lower_line == "clip":
+                        continue
+
+                    if "$" in next_line or "%" in next_line or " off" in next_lower_line:
+                        coupon_text = next_line
+                        break
+
+                if coupon_text is None:
+                    coupon_text = line
+
+                return coupon_text, coupon_value
+
+    joined_text = normalize_text(" ".join(lines))
+
+    if not joined_text or "coupon" not in joined_text.lower():
+        return None, None
+
+    coupon_match = re.search(
+        r"coupon\s+(?:.*?\s+)?((?:\d+\s*for\s*\$\s*\d+(?:\.\d{2})?|\d+%\s*off|\$\s*\d+(?:\.\d{2})?\s*off)(?:[^.]{0,120})?)",
+        joined_text,
+        flags=re.IGNORECASE,
+    )
+
+    if not coupon_match:
+        return None, None
+
+    coupon_text = normalize_text(coupon_match.group(1))
+    value_match = re.search(
+        r"(?:\d+\s*for\s*\$\s*\d+(?:\.\d{2})?|\d+%\s*off|\$\s*\d+(?:\.\d{2})?\s*off)",
+        coupon_text,
+        flags=re.IGNORECASE,
+    )
+
+    coupon_value = normalize_text(value_match.group(0)) if value_match else None
+
+    return coupon_text, coupon_value
 
 STORES = {
     "walmart": {
@@ -1404,6 +1490,12 @@ def extract_product_fields(page, store_key):
     price = extract_current_price_from_text(price_block_text, store_key=store_key)
     old_price = extract_old_price_from_text(price_block_text, store_key=store_key)
     unit_price = extract_unit_price_from_text(price_block_text) or extract_unit_price_from_text(body_text)
+
+    if store_key == "heb":
+        coupon_text, coupon_value = extract_heb_coupon_info(body_text)
+    else:
+        coupon_text, coupon_value = None, None
+
     price_context = classify_price_context(price_block_text)
     availability = extract_availability_from_text(
         body_text,
@@ -1412,7 +1504,17 @@ def extract_product_fields(page, store_key):
         price_block_text=price_block_text,
     )
 
-    return title, price, old_price, unit_price, price_block_text, price_context, availability
+    return (
+        title,
+        price,
+        old_price,
+        unit_price,
+        coupon_text,
+        coupon_value,
+        price_block_text,
+        price_context,
+        availability,
+    )
 
 
 def build_base_result(row, store_name, scrape_session_id, attempt_count):
@@ -1427,6 +1529,8 @@ def build_base_result(row, store_name, scrape_session_id, attempt_count):
         "price_raw": None,
         "old_price_raw": None,
         "unit_price_raw": None,
+        "coupon_text_raw": None,
+        "coupon_value_raw": None,
         "price_block_raw": None,
         "price_context_raw": None,
         "availability_raw": None,
@@ -1453,12 +1557,24 @@ def scrape_product_once(page, row, store_key, store_name, scrape_session_id, att
             result["error_message"] = "Bot protection page detected"
             return result
 
-        title, price, old_price, unit_price, price_block_text, price_context, availability = extract_product_fields(page, store_key)
+        (
+            title,
+            price,
+            old_price,
+            unit_price,
+            coupon_text,
+            coupon_value,
+            price_block_text,
+            price_context,
+            availability,
+        ) = extract_product_fields(page, store_key)
 
         result["product_title_raw"] = title
         result["price_raw"] = price
         result["old_price_raw"] = old_price
         result["unit_price_raw"] = unit_price
+        result["coupon_text_raw"] = coupon_text
+        result["coupon_value_raw"] = coupon_value
         result["price_block_raw"] = price_block_text
         result["price_context_raw"] = price_context
         result["availability_raw"] = availability
@@ -1468,6 +1584,8 @@ def scrape_product_once(page, row, store_key, store_name, scrape_session_id, att
         print(f"{store_name} parsed price: {price}")
         print(f"{store_name} parsed old price: {old_price}")
         print(f"{store_name} parsed unit price: {unit_price}")
+        print(f"{store_name} parsed coupon text: {coupon_text}")
+        print(f"{store_name} parsed coupon value: {coupon_value}")
         print(f"{store_name} price context: {price_context}")
         print(f"{store_name} availability: {availability}")
 
