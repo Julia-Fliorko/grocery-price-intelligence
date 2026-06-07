@@ -511,6 +511,20 @@ def extract_old_price_from_text(price_text, store_key=None):
         return non_unit_prices[0]
 
     if store_key == "whole_foods":
+        whole_foods_unit_prices = re.findall(
+            r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)",
+            price_text,
+            flags=re.IGNORECASE,
+        )
+
+        if len(whole_foods_unit_prices) >= 2:
+            return (
+                normalize_text(whole_foods_unit_prices[1])
+                .replace(" ", "")
+                .replace("ounce", "oz")
+                .replace("each", "ea")
+            )
+
         return non_unit_prices[1]
 
     if "was" in lower_text or "save" in lower_text or "off" in lower_text:
@@ -568,6 +582,15 @@ def classify_price_context(price_text):
 
     if "price when purchased online" in lower_text:
         context_flags.append("online_price")
+
+    same_line_unit_sale_prices = re.findall(
+        r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)",
+        price_text,
+        flags=re.IGNORECASE,
+    )
+
+    if len(same_line_unit_sale_prices) >= 2:
+        context_flags.append("discounted")
 
     if "now" in lower_text:
         context_flags.append("rollback_or_sale_price")
@@ -1464,8 +1487,9 @@ def extract_current_price_from_text(price_block_text, store_key=None):
     if store_key == "walmart" and "now" in lower_text:
         return cleaned_matches[0]
 
-    # Whole Foods sale block example: "$4.66 $5.49 ($0.93 / ounce)".
-    # The first product price is the active current price.
+    # Whole Foods weighted sale example:
+    # "$1.66/lb $1.99/lb | Total est. price: $1.33"
+    # For weighted items, keep the sale unit price as price_raw because that is the comparable shelf price.
     if store_key == "whole_foods":
         return cleaned_matches[0]
 
