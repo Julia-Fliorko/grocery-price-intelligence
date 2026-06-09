@@ -16,10 +16,10 @@ TEXT_TIMEOUT_MS = 10000
 PAGE_SETTLE_MS = 0
 RETRY_WAIT_MS = 30000
 
-MIN_PRODUCT_INTERVAL_SECONDS = 10
-MAX_PRODUCT_INTERVAL_SECONDS = 60
+MIN_PRODUCT_INTERVAL_SECONDS = 5
+MAX_PRODUCT_INTERVAL_SECONDS = 10
 MIN_PAGE_CLOSE_DELAY_SECONDS = 0
-MAX_PAGE_CLOSE_DELAY_SECONDS = 30
+MAX_PAGE_CLOSE_DELAY_SECONDS = 10
 
 SCRAPED_COLUMN = "scraped"
 LAST_SCRAPE_STATUS_COLUMN = "last_scrape_status"
@@ -59,6 +59,7 @@ BLOCK_INDICATORS = [
 ]
 
 RAW_COLUMNS = [
+    "snapshot_id",
     "scrape_session_id",
     "scrape_datetime",
     "store_name",
@@ -80,6 +81,7 @@ RAW_COLUMNS = [
 ]
 
 PROCESSED_COLUMNS = [
+    "snapshot_id",
     "scrape_session_id",
     "scrape_datetime",
     "store_name",
@@ -221,6 +223,17 @@ PERSONAL_CHROME_PROFILE_DIRECTORY = "Profile 12"
 
 def make_scrape_session_id():
     return datetime.now().strftime("%Y%m%d_%H%M%S")
+
+
+def make_snapshot_id(store_name, basket_item_id, scrape_datetime):
+    store_key = str(store_name).lower().replace(" ", "_")
+
+    if isinstance(scrape_datetime, datetime):
+        timestamp = scrape_datetime.strftime("%Y%m%d_%H%M%S")
+    else:
+        timestamp = pd.to_datetime(scrape_datetime).strftime("%Y%m%d_%H%M%S")
+
+    return f"{store_key}|{basket_item_id}|{timestamp}"
 
 
 def normalize_text(value):
@@ -511,6 +524,8 @@ def extract_old_price_from_text(price_text, store_key=None):
         return non_unit_prices[0]
 
     if store_key == "whole_foods":
+        # Discounted weighted items:
+        # "$1.66/lb $1.99/lb | Total est. price: $1.33"
         whole_foods_unit_prices = re.findall(
             r"\$\s*(?!0\.00)\d+(?:\.\d{2})?\s*/\s*(?:lb|oz|fl oz|ounce|each|ea|ct|count|gal)",
             price_text,
@@ -525,7 +540,12 @@ def extract_old_price_from_text(price_text, store_key=None):
                 .replace("each", "ea")
             )
 
-        return non_unit_prices[1]
+        # Discounted packaged items:
+        # "$7.43 $9.49 ($0.31 / ounce)"
+        if len(non_unit_prices) >= 2:
+            return non_unit_prices[1]
+
+        return None
 
     if "was" in lower_text or "save" in lower_text or "off" in lower_text:
         return non_unit_prices[1]
@@ -1542,9 +1562,15 @@ def extract_product_fields(page, store_key):
 
 
 def build_base_result(row, store_name, scrape_session_id, attempt_count):
+    scrape_datetime = datetime.now()
     return {
+        "snapshot_id": make_snapshot_id(
+            store_name,
+            row.get("basket_item_id"),
+            scrape_datetime,
+        ),
         "scrape_session_id": scrape_session_id,
-        "scrape_datetime": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "scrape_datetime": scrape_datetime.strftime("%Y-%m-%d %H:%M:%S"),
         "store_name": store_name,
         "basket_item_id": row.get("basket_item_id"),
         "canonical_name": get_canonical_name(row),
