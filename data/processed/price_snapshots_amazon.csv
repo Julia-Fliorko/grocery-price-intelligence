@@ -3875,3 +3875,648 @@ amazon|475|20260707_230339,20260707_225000,2026-07-07 23:03:39,Amazon,475,"torti
 Keyboard shortcut  shift + opt + D",$0.51,$4.58,,,,$4.58 $4 . 58 $0.51 per ounce ( $0.51 $0.51 / ounce),standard_price,in_stock,4.6,success
 amazon|476|20260707_230420,20260707_225000,2026-07-07 23:04:20,Amazon,476,"tortilla, flour, mission",https://www.amazon.com/Mission-Fajita-Grande-Flour-Tortillas/dp/B01FLKYJI2/,"Product summary presents key product information 
 Keyboard shortcut  shift + opt + D",$0.28,$2.79,,,,$2.79 $2 . 79 $0.28 per count ( $0.28 $0.28 / count),standard_price,in_stock,4.6,success
+amazon|1|20260721_214142,20260721_214005,2026-07-21 21:41:42,Amazon,1,chicken breast,https://www.amazon.com/Grocery-Chicken-Fillets-Boneless-Skinless/dp/B0CVZY667D/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.69,$13.45,,($2.69 /lb),$2.69,est. $13.45 $13 . 45 /each ($2.69 /lb),standard_price,in_stock,4.7,success
+amazon|2|20260721_214219,20260721_214005,2026-07-21 21:42:19,Amazon,2,"chicken breast, organic",https://www.amazon.com/PERDUE-HARVESTLAND-Organic-Boneless-Skinless/dp/B0GD4RMNGT/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.74,$8.76,,($6.74 /lb),$6.74,est. $8.76 $8 . 76 /each ($6.74 /lb),standard_price,in_stock,4.4,success
+amazon|3|20260721_214255,20260721_214005,2026-07-21 21:42:55,Amazon,3,chicken breast tenderloins,https://www.amazon.com/Grocery-Chicken-Tenderloins-Boneless-Skinless/dp/B0CVZYN2Q1/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.12,$6.18,,($4.12 /lb),$4.12,est. $6.18 $6 . 18 /each ($4.12 /lb),standard_price,in_stock,4.7,success
+amazon|4|20260721_214331,20260721_214005,2026-07-21 21:43:31,Amazon,4,"chicken breast tenderloins, organic",https://www.amazon.com/PERDUE-HARVESTLAND-Organic-Chicken-Tenderloins/dp/B0GD4ZCN15/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$8.53,$13.65,,($8.53 /lb),$8.53,est. $13.65 $13 . 65 /each ($8.53 /lb),standard_price,in_stock,4.2,success
+amazon|5|20260721_214409,20260721_214005,2026-07-21 21:44:09,Amazon,5,chicken thighs,https://www.amazon.com/Grocery-Chicken-Boneless-Skinless-Natural/dp/B0CVZS2SD8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.72,$16.74,,($3.72 /lb),$3.72,est. $16.74 $16 . 74 /each ($3.72 /lb),standard_price,in_stock,4.8,success
+amazon|6|20260721_214448,20260721_214005,2026-07-21 21:44:48,Amazon,6,"chicken thighs, organic",https://www.amazon.com/PERDUE-HARVESTLAND-Organic-Boneless-Skinless/dp/B0GD4VSWSC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.86,$8.58,,($6.86 /lb),$6.86,est. $8.58 $8 . 58 /each ($6.86 /lb),standard_price,in_stock,4.8,success
+amazon|7|20260721_214524,20260721_214005,2026-07-21 21:45:24,Amazon,7,"ground beef, 93/7",https://www.amazon.com/Amazon-Grocery-100-Pure-Ground/dp/B0FB45D2PM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$8.59,$8.59,,,,$8.59 $8 . 59 $8.59 per lb ( $8.59 $8.59 / lb),standard_price,in_stock,4.7,success
+amazon|8|20260721_214610,20260721_214005,2026-07-21 21:46:10,Amazon,8,"ground beef, 90/10",https://www.amazon.com/Amazon-Grocery-Previously-Fresh-Packaging/dp/B08LJVNW82/,"Amazon Grocery, Ground Beef, 90% Lean/10% Fat, 1 lb",$7,,,,,$7 . 99,standard_price,in_stock,4.7,success
+amazon|9|20260721_215018,20260721_214005,2026-07-21 21:50:18,Amazon,9,"ground beef, 80/20",https://www.amazon.com/Amazon-Grocery-Previously-Fresh-Packaging/dp/B08LJVQSL2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.99,$6.99,,,,$6.99 $6 . 99 $6.99 per lb ( $6.99 $6.99 / lb),standard_price,in_stock,4.7,success
+amazon|10|20260721_215136,20260721_214005,2026-07-21 21:51:36,Amazon,10,"steak, ribeye",https://www.amazon.com/Amazon-Grocery-Ribeye-Boneless-Choice/dp/B0D8PJYDMX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$14.79,$11.83,,($14.79 /lb),$14.79,est. $11.83 $11 . 83 /each ($14.79 /lb),standard_price,in_stock,4.3,success
+amazon|12|20260721_215212,20260721_214005,2026-07-21 21:52:12,Amazon,12,"steak, ribeye, organic",https://www.amazon.com/Verde-Farms-Ribeye-Organic-Grass-Fed/dp/B01N30RMAF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$12.48,,,,,$12.48,standard_price,out_of_stock,4.2,success
+amazon|13|20260721_215319,20260721_214005,2026-07-21 21:53:19,Amazon,13,"beef short ribs, bone in",https://www.amazon.com/Wellborn-2R-Ranch-4-Bone-Chuck/dp/B0FK5LL7KM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$149.99,,,,,$149.99,standard_price,in_stock,4.0,success
+amazon|16|20260721_215535,20260721_214005,2026-07-21 21:55:35,Amazon,16,"hickory sliced ham, smithfield",https://www.amazon.com/Smith-Field-Meat-Boneless-Hickory/dp/B0DKJNTYBT/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.33,$8.00,,,,$8.00 $8 . 00 $5.33 per lb ( $5.33 $5.33 / lb),standard_price,in_stock,4.3,success
+amazon|17|20260721_215612,20260721_214005,2026-07-21 21:56:12,Amazon,17,"bacon, hickory smoked",https://www.amazon.com/Amazon-Grocery-Naturally-Previously-Packaging/dp/B07YVMYYTM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.18,$4.18,,,,$4.18 $4 . 18 $4.18 per lb ( $4.18 $4.18 / lb),standard_price,in_stock,4.7,success
+amazon|18|20260721_215700,20260721_214005,2026-07-21 21:57:00,Amazon,18,"bacon, oscar mayer",https://www.amazon.com/Oscar-Mayer-Naturally-Hardwood-Bacon/dp/B000Q6U3E6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.99,$4.99,,,,$4.99 $4 . 99 $4.99 per lb ( $4.99 $4.99 / lb),standard_price,in_stock,4.8,success
+amazon|19|20260721_215746,20260721_214005,2026-07-21 21:57:46,Amazon,19,vegan bacon,https://www.amazon.com/MorningStar-Farms-Meatless-Strips-Vegetarian/dp/B000SKP4OE/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.87,$4.58,,,,$4.58 $4 . 58 $0.87 per ounce ( $0.87 $0.87 / ounce),standard_price,in_stock,4.6,success
+amazon|20|20260721_215835,20260721_214005,2026-07-21 21:58:35,Amazon,20,"brisket, beef, angus",https://www.amazon.com/Swift-Beef-Brisket-Boneless-Choice/dp/B0FBS3F2XX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.89,,,,,$0.89,standard_price,in_stock,4.4,success
+amazon|21|20260721_220023,20260721_214005,2026-07-21 22:00:23,Amazon,21,tilapia fillets,https://www.amazon.com/Fresh-Brand-Skinless-Responsibly-Previously/dp/B08LZV91ZM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$94.99,,,,,$94.99,standard_price,in_stock,4.6,success
+amazon|23|20260721_220352,20260721_214005,2026-07-21 22:03:52,Amazon,23,"tuna in water, starkist",https://www.amazon.com/StarKist-Chunk-Light-Tuna-Water/dp/B0D81JFB8V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.45,$17.28,,,,$17.28 $17 . 28 $0.45 per ounce ( $0.45 $0.45 / ounce),standard_price,in_stock,4.8,success
+amazon|24|20260721_220659,20260721_214005,2026-07-21 22:06:59,Amazon,24,"ham, lunchmeat, black forest,hillshire farm",https://www.amazon.com/Hillshire-Farm-Sliced-Lunch-Meat/dp/B08GTF6CSP/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.49,$6.49,,,,$6.49 $6 . 49 $6.49 per lb ( $6.49 $6.49 / lb),standard_price,in_stock,4.7,success
+amazon|26|20260721_221035,20260721_214005,2026-07-21 22:10:35,Amazon,26,"vegan lunch meat, hickory smoked, tofurky",https://www.amazon.com/Tofurky-Deli-Slices-Hickory-Smoked/dp/B000O6I9YY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$13.50,$4.59,,$9.95 for 2-hour delivery with Prime,$9.95,$4.59 $4 . 59 ( $13.50 $13.50 / lb),standard_price,in_stock,4.5,success
+amazon|27|20260721_221413,20260721_214005,2026-07-21 22:14:13,Amazon,27,"turkey breast, lunchmeat, hillshire farm",https://www.amazon.com/Hillshire-Farm-Roasted-Turkey-Family/dp/B01J3O2AVK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.48,$6.48,,,,$6.48 $6 . 48 $6.48 per lb ( $6.48 $6.48 / lb),standard_price,in_stock,4.8,success
+amazon|28|20260721_222724,20260721_222120,2026-07-21 22:27:24,Amazon,28,"vegan deli slices, oven roasted, tofurky",https://www.amazon.com/Tofurky-Deli-Slices-Oven-Roasted/dp/B00SUQLCG2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.99,,,,,$4.99,standard_price,in_stock,4.6,success
+amazon|29|20260721_223310,20260721_222120,2026-07-21 22:33:10,Amazon,29,chicken wings,https://www.amazon.com/PERDUE-Fresh-Chicken-Weight-Varies/dp/B0GD34FGQB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.64,$11.88,,($2.64 /lb),$2.64,est. $11.88 $11 . 88 /each ($2.64 /lb),standard_price,in_stock,4.3,success
+amazon|30|20260721_223627,20260721_223447,2026-07-21 22:36:27,Amazon,30,chicken drumsticks,https://www.amazon.com/Amazon-Grocery-Chicken-Drumsticks-Natural/dp/B0CVZH9Q8L/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.29,$6.45,,($1.29 /lb),$1.29,est. $6.45 $6 . 45 /each ($1.29 /lb),standard_price,in_stock,4.8,success
+amazon|31|20260721_223700,20260721_223447,2026-07-21 22:37:00,Amazon,31,"hot dogs, oscar mayer",https://www.amazon.com/Oscar-Mayer-Hot-Dogs-Wieners/dp/B000RYDFFG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.28,$2.84,,,,$2.84 $2 . 84 $0.28 per count ( $0.28 $0.28 / count),standard_price,in_stock,4.7,success
+amazon|33|20260721_223824,20260721_223447,2026-07-21 22:38:24,Amazon,33,breakfast sausage links,https://www.amazon.com/Fresh-Brand-Original-Breakfast-Sausage/dp/B07YVMQ7PJ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.19,$2.39,,,,$2.39 $2 . 39 $3.19 per lb ( $3.19 $3.19 / lb),standard_price,in_stock,4.7,success
+amazon|34|20260721_223907,20260721_223447,2026-07-21 22:39:07,Amazon,34,"breakfast sausage links, jimmy dean",https://www.amazon.com/Jimmy-Dean-Fully-Cooked-Sausage/dp/B0039BSJT6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$8.20,$4.92,,,,$4.92 $4 . 92 $8.20 per lb ( $8.20 $8.20 / lb),standard_price,in_stock,4.7,success
+amazon|35|20260721_224058,20260721_224008,2026-07-21 22:40:58,Amazon,35,"breakfast sausage, beyond meat",https://www.amazon.com/Beyond-Meat-Breakfast-Sausage-Patties/dp/B08NSLZRJQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.15,$102.26,,,,$102.26 $102 . 26 $1.15 per ounce ( $1.15 $1.15 / ounce),standard_price,in_stock,4.6,success
+amazon|36|20260721_224221,20260721_224008,2026-07-21 22:42:21,Amazon,36,"pork sausage, bratwurst, links, johnsonville",https://www.amazon.com/Johnsonville-Cheddar-Bratwurst-Sausage-Frozen/dp/B00ZIFZT3U/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.47,$6.49,,,,$6.49 $6 . 49 $5.47 per lb ( $5.47 $5.47 / lb),standard_price,in_stock,4.6,success
+amazon|37|20260721_224304,20260721_224008,2026-07-21 22:43:04,Amazon,37,"pork sausage, mild italian, links",https://www.amazon.com/Fresh-Brand-Italian-Sausage-FROZEN/dp/B07YVMCSZM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.62,$5.49,,,,$5.49 $5 . 49 $4.62 per lb ( $4.62 $4.62 / lb),standard_price,in_stock,4.7,success
+amazon|38|20260721_224508,20260721_224008,2026-07-21 22:45:08,Amazon,38,"pork sausage, mild italian, links, johnsonville",https://www.amazon.com/Johnsonville-Mild-Italian-Sausage-Frozen/dp/B0012S3HWW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.62,$5.49,,,,$5.49 $5 . 49 $4.62 per lb ( $4.62 $4.62 / lb),standard_price,in_stock,4.8,success
+amazon|39|20260721_224551,20260721_224008,2026-07-21 22:45:51,Amazon,39,"pork back ribs, bone in",https://www.amazon.com/Amazon-Grocery-Compliant-Weight-Varies/dp/B0D644Q8QJ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.84,$11.52,,($3.84 /lb),$3.84,est. $11.52 $11 . 52 /each ($3.84 /lb),standard_price,in_stock,4.6,success
+amazon|41|20260721_224624,20260721_224008,2026-07-21 22:46:24,Amazon,41,"eggs, large, brown, pasture raised,12 count, vital farms",https://www.amazon.com/Vital-Farms-Pasture-Organic-Raised/dp/B00M1QWODW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.03,$12.39,,,,$12.39 $12 . 39 $1.03 per count ( $1.03 $1.03 / count),standard_price,in_stock,4.8,success
+amazon|42|20260721_224708,20260721_224008,2026-07-21 22:47:08,Amazon,42,"eggs, large, white, cage free, 12 count",https://www.amazon.com/Amazon-Grocery-Cage-Free-Large-White/dp/B0F79YKZKH/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$2.29,,,,$2.29 $2 . 29 $0.19 per count ( $0.19 $0.19 / count),standard_price,in_stock,4.6,success
+amazon|43|20260721_224753,20260721_224008,2026-07-21 22:47:53,Amazon,43,liquid egg whites,https://www.amazon.com/Amazon-Brand-Happy-Liquid-Whites/dp/B08BKXR17P/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.17,$5.29,,,,$5.29 $5 . 29 $0.17 per fluid ounce ( $0.17 $0.17 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|44|20260721_224837,20260721_224008,2026-07-21 22:48:37,Amazon,44,"liquid egg whites, bob evans",https://www.amazon.com/Bob-Evans-Farms-Liquid-Whites/dp/B0862TDXVN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$3.22,,,,$3.22 $3 . 22 $0.10 per ounce ( $0.10 $0.10 / ounce),standard_price,in_stock,4.7,success
+amazon|48|20260721_224921,20260721_224008,2026-07-21 22:49:21,Amazon,48,"yogurt, greek, plain, nonfat, organic, stonyfield organic",https://www.amazon.com/Stonyfield-Organic-Stonfield-Greek-Plain/dp/B00B03XDPA/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$5.17,,,,$5.17 $5 . 17 $0.16 per ounce ( $0.16 $0.16 / ounce),standard_price,in_stock,4.7,success
+amazon|49|20260721_225004,20260721_224008,2026-07-21 22:50:04,Amazon,49,"yogurt, greek, plain, whole, organic, stonyfield organic",https://www.amazon.com/Stonyfield-Whole-Greek-Yogurt-Plain/dp/B01NBBVPLI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$4.85,,,,$4.85 $4 . 85 $0.16 per ounce ( $0.16 $0.16 / ounce),standard_price,in_stock,4.7,success
+amazon|50|20260721_225048,20260721_224008,2026-07-21 22:50:48,Amazon,50,"yogurt, greek, plain, whole",https://www.amazon.com/Amazon-Brand-Happy-Traditional-Yogurt/dp/B07WLS315H/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$2.99,,,,$2.99 $2 . 99 $0.09 per ounce ( $0.09 $0.09 / ounce),standard_price,in_stock,4.6,success
+amazon|52|20260721_225131,20260721_224008,2026-07-21 22:51:31,Amazon,52,"yogurt, Lowfat, strawberry, cups, yoplait original",https://www.amazon.com/Yoplait-Original-Yogurt-Strawberry-48/dp/B01CYOTFMI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$4.96,,,,$4.96 $4 . 96 $0.10 per ounce ( $0.10 $0.10 / ounce),standard_price,in_stock,4.8,success
+amazon|53|20260721_225257,20260721_224008,2026-07-21 22:52:57,Amazon,53,"yogurt, Lowfat, strawberry, tub, yoplait",https://www.amazon.com/Yoplait-Original-Smooth-Strawberry-Flavored/dp/B01BQ0RFHS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$3.27,,,,$3.27 $3 . 27 $0.10 per ounce ( $0.10 $0.10 / ounce),standard_price,in_stock,4.7,success
+amazon|54|20260721_225341,20260721_224008,2026-07-21 22:53:41,Amazon,54,"yogurt, high protein, greek, strawberry, cups, oikos",https://www.amazon.com/Oikos-Dannon-Triple-Nonfat-Strawberry/dp/B0742R5W74/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.83,$4.83,,,,$4.83 $4 . 83 $4.83 per count ( $4.83 $4.83 / count),standard_price,in_stock,4.8,success
+amazon|57|20260721_225426,20260721_224008,2026-07-21 22:54:26,Amazon,57,"yogurt, greek, nonfat, strawberry, tub, chobani",https://www.amazon.com/Chobani-Non-fat-Yogurt-Strawberry-Blended/dp/B00TZFTY94/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.97,$5.97,,,,$5.97 $5 . 97 $5.97 per count ( $5.97 $5.97 / count),standard_price,in_stock,4.8,success
+amazon|58|20260721_225510,20260721_224008,2026-07-21 22:55:10,Amazon,58,"yogurt, greek, nonfat, strawberry, cups, light + fit",https://www.amazon.com/Dannon-Light-Fit-Blended-Strawberry/dp/B00CIQNURY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$4.22,,,,$4.22 $4 . 22 $0.20 per ounce ( $0.20 $0.20 / ounce),standard_price,in_stock,4.8,success
+amazon|62|20260721_225553,20260721_224008,2026-07-21 22:55:53,Amazon,62,"yogurt, greek, nonfat, vanilla, tub, chobani",https://www.amazon.com/Chobani-Non-fat-Yogurt-Vanilla-Blended/dp/B00CJ8MJG4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.17,$5.37,,,,$5.37 $5 . 37 $0.17 per ounce ( $0.17 $0.17 / ounce),standard_price,in_stock,4.8,success
+amazon|63|20260721_225636,20260721_224008,2026-07-21 22:56:36,Amazon,63,"nonfat greek yogurt, vanilla, cups, chobani",https://www.amazon.com/Chobani-Non-Fat-Yogurt-Vanilla-Blended/dp/B06XYMWJHH/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.18,$4.18,,,,$4.18 $4 . 18 $4.18 per count ( $4.18 $4.18 / count),standard_price,in_stock,4.8,success
+amazon|64|20260721_225720,20260721_224008,2026-07-21 22:57:20,Amazon,64,"yogurt, greek, nonfat, vanilla, cups, light + fit",https://www.amazon.com/Dannon-Light-Fit-Blended-Vanilla/dp/B00CIQNUXI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$4.22,,,,$4.22 $4 . 22 $0.20 per ounce ( $0.20 $0.20 / ounce),standard_price,in_stock,4.8,success
+amazon|65|20260721_225804,20260721_224008,2026-07-21 22:58:04,Amazon,65,"yogurt, greek, nonfat, vanilla, tub, light + fit",https://www.amazon.com/Dannon-Nonfat-Yogurt-Vanilla-Gluten-Free/dp/B000Q3X3E6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.17,$5.48,,,,$5.48 $5 . 48 $0.17 per ounce ( $0.17 $0.17 / ounce),standard_price,in_stock,4.8,success
+amazon|66|20260721_225847,20260721_224008,2026-07-21 22:58:47,Amazon,66,"yogurt, high protein, greek, vanilla, tub, chobani",https://www.amazon.com/Chobani%C2%AE-Protein-Lowfat-Yogurt-Vanilla/dp/B0DQVT9SK1/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$6.12,,,,$6.12 $6 . 12 $0.19 per ounce ( $0.19 $0.19 / ounce),standard_price,in_stock,4.7,success
+amazon|67|20260721_225930,20260721_224008,2026-07-21 22:59:30,Amazon,67,"yogurt, high protein, greek, vanilla, cups, chobani",https://www.amazon.com/Chobani%C2%AE-Protein-Lowfat-Yogurt-Vanilla/dp/B0DQVWWTCN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.15,$3.99,,,,$3.99 $3 . 99 $0.15 per ounce ( $0.15 $0.15 / ounce),standard_price,in_stock,4.7,success
+amazon|68|20260721_230004,20260721_224008,2026-07-21 23:00:04,Amazon,68,"vegan yogurt, coconut base, plain, tub, harmless harvest",https://www.amazon.com/Harmless-Harvest-Yogurt-Coconut-Organic/dp/B08BGQT3BX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.33,$7.99,,$9.95 for 2-hour delivery with Prime,$9.95,$7.99 $7 . 99 ( $0.33 $0.33 / ounce),standard_price,in_stock,4.5,success
+amazon|69|20260721_230048,20260721_224008,2026-07-21 23:00:48,Amazon,69,"vegan yogurt, coconut base, vanilla, tub, so delicious",https://www.amazon.com/Delicious-Yogurt-Cult-Coco-frozen/dp/B07895LGCC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.28,$6.79,,,,$6.79 ( $0.28 $0.28 / ounce),standard_price,in_stock,4.5,success
+amazon|70|20260721_230132,20260721_224008,2026-07-21 23:01:32,Amazon,70,"vegan yogurt, coconut base, vanilla, cup, so delicious",https://www.amazon.com/Delicious-Coconut Milk-Yogurt-Alternative-Vanilla/dp/B019HS2P5I/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.34,$1.82,,,,$1.82 $1 . 82 $0.34 per ounce ( $0.34 $0.34 / ounce),standard_price,in_stock,4.6,success
+amazon|71|20260721_230216,20260721_224008,2026-07-21 23:02:16,Amazon,71,"vegan yogurt, coconut base, vanilla, tub, harmless harvest",https://www.amazon.com/Harmless-Harvest-Organic-Unsweetened-Vanilla/dp/B0CB1NN66V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.36,$8.66,,$9.95 for 2-hour delivery with Prime,$9.95,$8.66 $8 . 66 ( $0.36 $0.36 / ounce),standard_price,in_stock,4.6,success
+amazon|73|20260721_230259,20260721_224008,2026-07-21 23:02:59,Amazon,73,"vegan yogurt, soy base, vanilla, cup, silk",https://www.amazon.com/Silk-Dairy-Yogurt-Alternative-Vanilla/dp/B018XW013M/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.31,$1.66,,,,$1.66 $1 . 66 $0.31 per fluid ounce ( $0.31 $0.31 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|74|20260721_230343,20260721_224008,2026-07-21 23:03:43,Amazon,74,"vegan yogurt, coconut base, strawberry, cup, so delicious",https://www.amazon.com/Delicious-Coconut Milk-Dairy-Free-Raspberry-Plant-Based/dp/B019HS2P26/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.34,$1.82,,,,$1.82 $1 . 82 $0.34 per ounce ( $0.34 $0.34 / ounce),standard_price,in_stock,4.7,success
+amazon|75|20260721_230547,20260721_224008,2026-07-21 23:05:47,Amazon,75,"vegan yogurt, soy base, strawberry, cup, silk",https://www.amazon.com/Silk-Yogurt-Soy-Strawberry-5-3/dp/B014BCGGPK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.38,$1.99,,$9.95 for 2-hour delivery with Prime,$9.95,$1.99 $1 . 99 ( $0.38 $0.38 / ounce),standard_price,in_stock,4.6,success
+amazon|77|20260721_230630,20260721_224008,2026-07-21 23:06:30,Amazon,77,"vegan yogurt, cashew base, vanilla, tub, forager project",https://www.amazon.com/Forager-Project-Dairy-Free-Cashew Milk-Alternative/dp/B0779CMM8R/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.33,$7.99,,,,$7.99 $7 . 99 $0.33 per ounce ( $0.33 $0.33 / ounce),standard_price,in_stock,4.7,success
+amazon|79|20260721_230714,20260721_224008,2026-07-21 23:07:14,Amazon,79,"milk, whole",https://www.amazon.com/Amazon-Grocery-Whole-Milk-Gallon/dp/B0D6TFZBF8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.02,$2.59,,,,$2.59 $2 . 59 $0.02 per fluid ounce ( $0.02 $0.02 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|80|20260721_230757,20260721_224008,2026-07-21 23:07:57,Amazon,80,"milk, 2%",https://www.amazon.com/Amazon-Grocery-Reduced-Milk-Gallon/dp/B0D6THTMHK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.02,$2.59,,,,$2.59 $2 . 59 $0.02 per fluid ounce ( $0.02 $0.02 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|81|20260721_230842,20260721_224008,2026-07-21 23:08:42,Amazon,81,"milk, fat-free",https://www.amazon.com/Amazon-Grocery-Free-Skim-Gallon/dp/B0DFX7LSWS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.02,$2.59,,,,$2.59 $2 . 59 $0.02 per fluid ounce ( $0.02 $0.02 / fluid ounce),standard_price,in_stock,4.5,success
+amazon|82|20260721_230925,20260721_224008,2026-07-21 23:09:25,Amazon,82,"milk, fat-free, organic, horizon",https://www.amazon.com/Horizon-Organic-Omega-3-Reduced-Pasteurized/dp/B001RNA658/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$6.46,,,,$6.46 $6 . 46 $0.10 per fluid ounce ( $0.10 $0.10 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|84|20260721_231008,20260721_224008,2026-07-21 23:10:08,Amazon,84,"milk, whole, organic, horizon",https://www.amazon.com/Horizon-Organic-Pasteurized-Vitamin-Typical/dp/B000SKM8LQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$5.96,,,,$5.96 $5 . 96 $0.09 per fluid ounce ( $0.09 $0.09 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|85|20260721_231052,20260721_224008,2026-07-21 23:10:52,Amazon,85,"milk, 2%, organic, horizon, dha",https://www.amazon.com/Horizon-Organic-Reduced-Pasteurized-Gallon/dp/B000SKPJSU/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$5.96,,,,$5.96 $5 . 96 $0.09 per fluid ounce ( $0.09 $0.09 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|89|20260721_231135,20260721_224008,2026-07-21 23:11:35,Amazon,89,"milk, fat-free, lactose free, fairlife",https://www.amazon.com/Fairlife-Free-Ultra-Filtered-Lactose/dp/B00QM3M00W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$5.32,,,,$5.32 $5 . 32 $0.10 per fluid ounce ( $0.10 $0.10 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|90|20260721_231219,20260721_224008,2026-07-21 23:12:19,Amazon,90,"milk, 2%, lactose free, fairlife",https://www.amazon.com/fairlife-2-reduced-fat-milk/dp/B00QM3LZGC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$5.32,,,,$5.32 $5 . 32 $0.10 per fluid ounce ( $0.10 $0.10 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|91|20260721_231302,20260721_224008,2026-07-21 23:13:02,Amazon,91,"milk, whole, lactose free, fairlife",https://www.amazon.com/Fairlife-Milk-Whole-52-oz/dp/B00QM3LZQM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$5.32,,,,$5.32 $5 . 32 $0.10 per fluid ounce ( $0.10 $0.10 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|92|20260721_231426,20260721_224008,2026-07-21 23:14:26,Amazon,92,"oat milk, unsweetened, planet oat",https://www.amazon.com/Planet-Oat-Original-Oat Milk-52/dp/B07KNKDBJ5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.07,$3.38,,,,$3.38 $3 . 38 $0.07 per fluid ounce ( $0.07 $0.07 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|93|20260721_231509,20260721_224008,2026-07-21 23:15:09,Amazon,93,"oat milk, sweetened, oatly",https://www.amazon.com/Oatly-OATLY-Original-Oat-Milk/dp/B075QJ8M1K/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.08,$5.27,,,,$5.27 $5 . 27 $0.08 per fluid ounce ( $0.08 $0.08 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|94|20260721_231553,20260721_224008,2026-07-21 23:15:53,Amazon,94,"soy milk, unsweetened, silk",https://www.amazon.com/Silk-Unsweetened-Delicious-Essential-Nutrients/dp/B0FRP259QD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.04,$2.78,,,,$2.78 $2 . 78 $0.04 per fluid ounce ( $0.04 $0.04 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|96|20260721_231636,20260721_224008,2026-07-21 23:16:36,Amazon,96,"almond milk, unsweetened, silk",https://www.amazon.com/Silk-Almond-Unsweetened-Unflavored-Dairy-Alternative/dp/B004XJNF0G/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$2.99,,,,$2.99 $2 . 99 $0.05 per fluid ounce ( $0.05 $0.05 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|97|20260721_231720,20260721_224008,2026-07-21 23:17:20,Amazon,97,"almond milk, unsweetened",https://www.amazon.com/Fresh-Brand-Unsweetened-Almond Milk-Previously/dp/B0986BSRHG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.04,$2.29,,,,$2.29 $2 . 29 $0.04 per fluid ounce ( $0.04 $0.04 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|98|20260721_231803,20260721_224008,2026-07-21 23:18:03,Amazon,98,"soy milk, sweetened, high protein, silk",https://www.amazon.com/Silk-Protein-Complete-Original-Lactose/dp/B0FLQLQ1Q6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$4.97,,,,$4.97 $4 . 97 $0.10 per fluid ounce ( $0.10 $0.10 / fluid ounce),standard_price,in_stock,4.3,success
+amazon|101|20260721_231847,20260721_224008,2026-07-21 23:18:47,Amazon,101,"almond milk, unsweetened, vanilla, almond breeze",https://www.amazon.com/Almond-Breeze-Unsweetened-Vanilla-Almond Milk/dp/B00CJ8JJ6W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$3.67,,,,$3.67 $3 . 67 $0.06 per fluid ounce ( $0.06 $0.06 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|102|20260721_231930,20260721_224008,2026-07-21 23:19:30,Amazon,102,"almond milk, unsweetened, vanilla",https://www.amazon.com/Fresh-Brand-Unsweetened-Almond Milk-Previously/dp/B09863XK4V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.04,$2.29,,($0.08/fluid ounce),$0.08,$2.29 $2 . 29 $0.04 per fluid ounce ( $0.04 $0.04 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|103|20260721_232014,20260721_224008,2026-07-21 23:20:14,Amazon,103,"cottage cheese, 2%, daisy pure",https://www.amazon.com/Daisy-2-Cottage-Cheese-24/dp/B00YGHFB0M/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$4.89,,$9.95 for 2-hour delivery with Prime,$9.95,$4.89 $4 . 89 ( $0.20 $0.20 / ounce),standard_price,in_stock,4.7,success
+amazon|105|20260721_232047,20260721_224008,2026-07-21 23:20:47,Amazon,105,"cottage cheese, 4%, daisy pure",https://www.amazon.com/Daisy-4-Cottage-Cheese-24/dp/B00Y9ESSMK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$4.89,,$9.95 for 2-hour delivery with Prime,$9.95,$4.89 $4 . 89 ( $0.20 $0.20 / ounce),standard_price,in_stock,4.7,success
+amazon|107|20260721_232131,20260721_224008,2026-07-21 23:21:31,Amazon,107,"butter, unsalted",https://www.amazon.com/Amazon-Brand-Unsalted-Butter-Sticks/dp/B07VHDXKRG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$3.06,,,,$3.06 $3 . 06 $0.19 per ounce ( $0.19 $0.19 / ounce),standard_price,in_stock,4.8,success
+amazon|108|20260721_232214,20260721_224008,2026-07-21 23:22:14,Amazon,108,"butter, unsalted, kerrygold",https://www.amazon.com/Kerrygold-Grass-Fed-Unsalted-Butter-Sticks/dp/B0CPF1W6B5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.62,$9.99,,,,$9.99 $9 . 99 $0.62 per ounce ( $0.62 $0.62 / ounce),standard_price,in_stock,4.9,success
+amazon|109|20260721_232257,20260721_224008,2026-07-21 23:22:57,Amazon,109,"vegan butter, salted, country crock",https://www.amazon.com/Country-Crock-Plant-Butter-Sticks/dp/B08H9FTZMN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.26,$4.18,,,,$4.18 $4 . 18 $0.26 per ounce ( $0.26 $0.26 / ounce),standard_price,in_stock,4.8,success
+amazon|110|20260721_232341,20260721_224008,2026-07-21 23:23:41,Amazon,110,"vegan butter, salted, earth balance",https://www.amazon.com/Earth-Balance-Original-Buttery-Spread/dp/B000O6EFGK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.27,$3.98,,,,$3.98 $3 . 98 $0.27 per ounce ( $0.27 $0.27 / ounce),standard_price,in_stock,4.7,success
+amazon|112|20260721_232424,20260721_224008,2026-07-21 23:24:24,Amazon,112,"vegan cheese, cheddar, shredded",https://www.amazon.com/Fresh-Brand-Plant-Based-Shredded-Cheddar/dp/B09CVRN58L/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.42,$3.39,,,,$3.39 $3 . 39 $0.42 per ounce ( $0.42 $0.42 / ounce),standard_price,in_stock,4.4,success
+amazon|113|20260721_232628,20260721_224008,2026-07-21 23:26:28,Amazon,113,"vegan cheese, cheddar, shredded, violife",https://www.amazon.com/Violife-Just-Like-Cheddar-Shreds/dp/B07GT6857V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.66,$5.29,,,,$5.29 $5 . 29 $0.66 per ounce ( $0.66 $0.66 / ounce),standard_price,in_stock,4.6,success
+amazon|114|20260721_232712,20260721_224008,2026-07-21 23:27:12,Amazon,114,"vegan cheese, cheddar, shredded, daiya",https://www.amazon.com/Daiya-Cutting-Cheddar-Cheese-Shreds/dp/B07N5JTSLN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.67,$4.79,,,,$4.79 $4 . 79 $0.67 per ounce ( $0.67 $0.67 / ounce),standard_price,in_stock,4.5,success
+amazon|115|20260721_232756,20260721_224008,2026-07-21 23:27:56,Amazon,115,"cheese, mild cheddar, shredded",https://www.amazon.com/Amazon-Grocery-Mild-Cheddar-Cheese/dp/B0D63VSYKJ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.69,,,,,$1.69,standard_price,in_stock,4.7,success
+amazon|116|20260721_232939,20260721_224008,2026-07-21 23:29:39,Amazon,116,"cheese, mild cheddar, shredded, kraft",https://www.amazon.com/Kraft-Cheese-Natural-Shredded-Cheddar/dp/B00032A5MS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.37,$2.98,,,,$2.98 $2 . 98 $0.37 per ounce ( $0.37 $0.37 / ounce),standard_price,in_stock,4.8,success
+amazon|117|20260721_233024,20260721_224008,2026-07-21 23:30:24,Amazon,117,"vegan cheese, mozzarella, shredded",https://www.amazon.com/Fresh-Brand-Plant-Based-Shredded-Mozzerella/dp/B09CVQJ9NF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.42,$3.39,,,,$3.39 $3 . 39 $0.42 per ounce ( $0.42 $0.42 / ounce),standard_price,in_stock,4.4,success
+amazon|118|20260721_233108,20260721_224008,2026-07-21 23:31:08,Amazon,118,"vegan cheese, mozzarella, shredded, violife",https://www.amazon.com/Violife-Just-Like-Mozzarella-Shreds/dp/B07GT6H8SY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.62,$4.97,,,,$4.97 $4 . 97 $0.62 per ounce ( $0.62 $0.62 / ounce),standard_price,in_stock,4.6,success
+amazon|119|20260721_233151,20260721_224008,2026-07-21 23:31:51,Amazon,119,"vegan cheese, mozzarella, shredded, daiya",https://www.amazon.com/DAIYA-Mozzarella-Style-Shreds-7-1/dp/B0817H746Y/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.75,$5.29,,$9.95 for 2-hour delivery with Prime,$9.95,$5.29 $5 . 29 ( $0.75 $0.75 / ounce),standard_price,in_stock,4.5,success
+amazon|120|20260721_233235,20260721_224008,2026-07-21 23:32:35,Amazon,120,"cheese, mozzarella, low moisture, part skim, shredded",https://www.amazon.com/Amazon-Brand-Shredded-Mozzarella-Part-Skim/dp/B075Y87ZGM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.25,$1.97,,,,$1.97 $1 . 97 $0.25 per ounce ( $0.25 $0.25 / ounce),standard_price,in_stock,4.7,success
+amazon|121|20260721_233318,20260721_224008,2026-07-21 23:33:18,Amazon,121,"cheese, mozzarella, low moisture, part skim, shredded, kraft",https://www.amazon.com/Kraft-Shredded-Mozzarella-Cheese-Bag/dp/B000OV4FZG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.98,,,,,$2.98,standard_price,out_of_stock,4.8,success
+amazon|122|20260721_233421,20260721_224008,2026-07-21 23:34:21,Amazon,122,"cheese, medium cheddar, block, tillamook",https://www.amazon.com/Tillamook-mburring-Medium-Cheddar-Cheese/dp/B000O0GLYA/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.59,$4.69,,$9.95 for 2-hour delivery with Prime,$9.95,$4.69 $4 . 69 ( $0.59 $0.59 / ounce),standard_price,in_stock,4.8,success
+amazon|123|20260721_233503,20260721_224008,2026-07-21 23:35:03,Amazon,123,"cheese, medium cheddar, block",https://www.amazon.com/Grocery-Previously-Happy-Belly-Packaging/dp/B075Y8WSTJ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.69,,,$1.87,$1.87,$1.69,standard_price,in_stock,4.7,success
+amazon|124|20260721_233606,20260721_224008,2026-07-21 23:36:06,Amazon,124,"cheese, medium cheddar, block, kraft",https://www.amazon.com/Kraft-Cheese-Natural-Medium-Cheddar/dp/B00032A29E/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.44,$3.49,,,,$3.49 $3 . 49 $0.44 per ounce ( $0.44 $0.44 / ounce),standard_price,in_stock,4.8,success
+amazon|125|20260721_233649,20260721_224008,2026-07-21 23:36:49,Amazon,125,"cheese, mozzarella, block",https://www.amazon.com/Amazon-Brand-Mozzarella-Cheese-Ounces/dp/B07WHNNXZB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$1.89,,,,$1.89 $1 . 89 $0.24 per ounce ( $0.24 $0.24 / ounce),standard_price,in_stock,4.7,success
+amazon|126|20260721_233733,20260721_224008,2026-07-21 23:37:33,Amazon,126,"cream cheese, philadelphia",https://www.amazon.com/Philadelphia-mburring-Cream-Cheese-Original/dp/B000PXYFTY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.37,$2.98,,,,$2.98 $2 . 98 $0.37 per ounce ( $0.37 $0.37 / ounce),standard_price,in_stock,4.8,success
+amazon|127|20260721_233815,20260721_224008,2026-07-21 23:38:15,Amazon,127,cream cheese,https://www.amazon.com/Amazon-Brand-Happy-Belly-Cheese/dp/B0883QFRSC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$1.56,,,,$1.56 $1 . 56 $0.20 per ounce ( $0.20 $0.20 / ounce),standard_price,in_stock,4.7,success
+amazon|129|20260721_233859,20260721_224008,2026-07-21 23:38:59,Amazon,129,"vegan cream cheese, plain, kite hill",https://www.amazon.com/Kite-Hill-Plain-Cheese-Spread/dp/B06ZZXSKSB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.12,$8.99,,,,$8.99 $8 . 99 $1.12 per ounce ( $1.12 $1.12 / ounce),standard_price,in_stock,4.4,success
+amazon|135|20260721_233942,20260721_224008,2026-07-21 23:39:42,Amazon,135,"tofu, firm, organic",https://www.amazon.com/365-Everyday-Value-Organic-Extra/dp/B074H5HJ11/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.17,$2.38,,,,$2.38 $2 . 38 $0.17 per ounce ( $0.17 $0.17 / ounce),standard_price,in_stock,4.7,success
+amazon|138|20260721_234026,20260721_224008,2026-07-21 23:40:26,Amazon,138,"vegan ground beef, gardein",https://www.amazon.com/Gardein-Gluten-Free-Plant-Based-Ground-Crumbles/dp/B00LXZTVU6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.36,$4.92,,,,$4.92 $4 . 92 $0.36 per ounce ( $0.36 $0.36 / ounce),standard_price,in_stock,4.6,success
+amazon|141|20260721_234109,20260721_224008,2026-07-21 23:41:09,Amazon,141,"tempeh, lightlife",https://www.amazon.com/LightLife-Tempeh-Original-Soy-Organic/dp/B000YN1JY4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.46,$3.69,,,,$3.69 $3 . 69 $0.46 per ounce ( $0.46 $0.46 / ounce),standard_price,in_stock,4.5,success
+amazon|144|20260721_234153,20260721_224008,2026-07-21 23:41:53,Amazon,144,"vegan nuggets, impossible",https://www.amazon.com/Impossible-Foods-Impossible-Chicken-Nuggets/dp/B09C15QWT4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.52,$6.99,,,,$6.99 $6 . 99 $0.52 per ounce ( $0.52 $0.52 / ounce),standard_price,in_stock,4.6,success
+amazon|148|20260721_234236,20260721_224008,2026-07-21 23:42:36,Amazon,148,"chicken nuggets, perdue",https://www.amazon.com/Perdue-Simply-Smart-Lightly-Breaded/dp/B075LBZP9H/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$8.36,$11.49,,,,$11.49 $11 . 49 $8.36 per lb ( $8.36 $8.36 / lb),standard_price,in_stock,4.6,success
+amazon|149|20260721_234319,20260721_224008,2026-07-21 23:43:19,Amazon,149,"vegan hot dogs, lightlife",https://www.amazon.com/Lightlife-Smart-Dogs-Jumbo-13-5/dp/B000VHRO10/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.26,$3.50,,,,$3.50 $3 . 50 $0.26 per ounce ( $0.26 $0.26 / ounce),standard_price,in_stock,4.3,success
+amazon|150|20260721_234403,20260721_224008,2026-07-21 23:44:03,Amazon,150,"nutritional yeast, bob's red mill",https://www.amazon.com/bob's-Red-Mill-Large-Flake/dp/B078X2GM29/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.02,$5.11,,$9.95 for 2-hour delivery with Prime,$9.95,$5.11 $5 . 11 ( $1.02 $1.02 / oz),standard_price,in_stock,4.8,success
+amazon|151|20260721_234447,20260721_224008,2026-07-21 23:44:47,Amazon,151,"vegan marshmallows, dandies",https://www.amazon.com/Dandies-Vegan-Marshmallows-Vanilla-Ounce/dp/B00FBNZ58S/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.40,$3.99,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.99 $3 . 99 ( $0.40 $0.40 / ounce),standard_price,in_stock,4.7,success
+amazon|152|20260721_234651,20260721_224008,2026-07-21 23:46:51,Amazon,152,marshmallows,https://www.amazon.com/Amazon-Brand-Happy-Belly-Marshmallows/dp/B08RSVNR3D/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.12,$1.16,,,,$1.16 $1 . 16 $0.12 per ounce ( $0.12 $0.12 / ounce),standard_price,in_stock,4.6,success
+amazon|153|20260721_234735,20260721_224008,2026-07-21 23:47:35,Amazon,153,"protein bar, barebells",https://www.amazon.com/BARBELL-BDAY-CKE-PRTN-BR/dp/B0DSZX4HNJ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.61,,,,,$7.61,standard_price,in_stock,3.0,success
+amazon|154|20260721_234908,20260721_224008,2026-07-21 23:49:08,Amazon,154,"protein bar, clif BUILDER'S",https://www.amazon.com/CLIF-BUILDER'S-Protein-Bars-Artificial/dp/B00I669GHS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.16,$9.98,,,,$9.98 $9 . 98 $4.16 per ounce ( $4.16 $4.16 / ounce),standard_price,in_stock,4.5,success
+amazon|157|20260721_234952,20260721_224008,2026-07-21 23:49:52,Amazon,157,"protein powder, chocolate, optimum nutrition",https://www.amazon.com/Optimum-Nutrition-Delicious-Strawberry-Packaging/dp/B002DYIZH6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.70,$54.25,,,,$54.25 $54 . 25 $1.70 per ounce ( $1.70 $1.70 / ounce),standard_price,in_stock,4.6,success
+amazon|160|20260721_235036,20260721_224008,2026-07-21 23:50:36,Amazon,160,"vegan protein, chocolate, organic, orgain",https://www.amazon.com/Orgain-Organic-Protein-Powder-Chocolate/dp/B00J074W94/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.91,$29.59,,,,$29.59 $29 . 59 $0.91 per ounce ( $0.91 $0.91 / ounce),standard_price,in_stock,4.5,success
+amazon|164|20260721_235120,20260721_224008,2026-07-21 23:51:20,Amazon,164,"spinach, frozen",https://www.amazon.com/Grocery-Previously-Happy-Belly-Packaging/dp/B07WJGM6SW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.27,$0.95,,,,$0.95 $0 . 95 $1.27 per lb ( $1.27 $1.27 / lb),standard_price,in_stock,4.7,success
+amazon|168|20260721_235204,20260721_224008,2026-07-21 23:52:04,Amazon,168,"broccoli florets, frozen",https://www.amazon.com/Amazon-Fresh-Broccoli-Florets-Ounce/dp/B0CYNPDG64/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.44,$2.88,,,,$2.88 $2 . 88 $1.44 per lb ( $1.44 $1.44 / lb),standard_price,in_stock,4.7,success
+amazon|170|20260721_235247,20260721_224008,2026-07-21 23:52:47,Amazon,170,brussels sprouts,https://www.amazon.com/Fresh-Produce-Brands-Vary-60907/dp/B003IQ3PEQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.27,$3.27,,,,$3.27 $3 . 27 $3.27 per lb ( $3.27 $3.27 / lb),standard_price,in_stock,4.6,success
+amazon|171|20260721_235330,20260721_224008,2026-07-21 23:53:30,Amazon,171,"brussels sprouts, frozen",https://www.amazon.com/Amazon-Brand-Frozen-Brussels-Sprouts/dp/B07WR9JM45/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.99,$1.49,,,,$1.49 $1 . 49 $1.99 per lb ( $1.99 $1.99 / lb),standard_price,in_stock,4.8,success
+amazon|172|20260721_235414,20260721_224008,2026-07-21 23:54:14,Amazon,172,sweet potatoes,https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B079M54HW4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.84,,,,,$2.84,standard_price,in_stock,4.5,success
+amazon|173|20260721_235547,20260721_224008,2026-07-21 23:55:47,Amazon,173,"sweet potatoes, organic",https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B07FZKXQT2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.95,$1.95,,,,$1.95 $1 . 95 $1.95 per count ( $1.95 $1.95 / count),standard_price,in_stock,4.4,success
+amazon|174|20260721_235632,20260721_224008,2026-07-21 23:56:32,Amazon,174,red potatoes,https://www.amazon.com/Fresh-Brand-Red-Potatoes/dp/B07XW1MJCZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.29,$6.44,,,,$6.44 $6 . 44 $1.29 per lb ( $1.29 $1.29 / lb),standard_price,in_stock,4.7,success
+amazon|178|20260721_235716,20260721_224008,2026-07-21 23:57:16,Amazon,178,carrots,https://www.amazon.com/Fresh-Brand-Whole-Carrots/dp/B07XW1H4V8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.13,$2.26,,,,$2.26 $2 . 26 $1.13 per lb ( $1.13 $1.13 / lb),standard_price,in_stock,4.7,success
+amazon|179|20260721_235800,20260721_224008,2026-07-21 23:58:00,Amazon,179,baby carrots,https://www.amazon.com/Fresh-Brand-Baby-Peeled-Carrots/dp/B07XW1MJD8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.32,$1.32,,,,$1.32 $1 . 32 $1.32 per lb ( $1.32 $1.32 / lb),standard_price,in_stock,4.7,success
+amazon|180|20260721_235843,20260721_224008,2026-07-21 23:58:43,Amazon,180,"pepper bell, red",https://www.amazon.com/Red-Bell-Pepper-1-Each/dp/B000P6L42C/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.52,$1.52,,,,$1.52 $1 . 52 $1.52 per count ( $1.52 $1.52 / count),standard_price,in_stock,4.7,success
+amazon|181|20260721_235926,20260721_224008,2026-07-21 23:59:26,Amazon,181,"pepper bell, green",https://www.amazon.com/Amazon-Fresh-Produce-Aisle-183031/dp/B001PLESVU/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.86,$0.86,,,,$0.86 $0 . 86 $0.86 per count ( $0.86 $0.86 / count),standard_price,in_stock,4.7,success
+amazon|182|20260722_000009,20260721_224008,2026-07-22 00:00:09,Amazon,182,"tomato, roma",https://www.amazon.com/Fresh-Produce-Brands-Vary-B000P6G13E/dp/B000P6G13E/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.29,$0.29,,($0.08/ounce),$0.08,$0.29 $0 . 29 $0.29 per count ( $0.29 $0.29 / count),standard_price,in_stock,4.6,success
+amazon|183|20260722_000052,20260721_224008,2026-07-22 00:00:52,Amazon,183,grape tomatoes,https://www.amazon.com/Fresh-Brand-Grape-Tomatoes-10/dp/B07XW19QBX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.78,,,,,$2.78,standard_price,out_of_stock,4.7,success
+amazon|184|20260722_000156,20260721_224008,2026-07-22 00:01:56,Amazon,184,romaine lettuce,https://www.amazon.com/Produce-CT0040-Romaine-Lettuce-Head/dp/B00C8XF40I/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.14,$2.14,,,,$2.14 $2 . 14 $2.14 per count ( $2.14 $2.14 / count),standard_price,in_stock,4.6,success
+amazon|185|20260722_000320,20260721_224008,2026-07-22 00:03:20,Amazon,185,"cucumbers, mini",https://www.amazon.com/Fresh-Brand-Mini-Cucumbers-16/dp/B086WXSSQV/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.08,,,,,$2.08,standard_price,out_of_stock,4.4,success
+amazon|187|20260722_000423,20260721_224008,2026-07-22 00:04:23,Amazon,187,bananas,https://www.amazon.com/Dole-Banana-Bunch-4-5-Count/dp/B07ZLFPXHC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.25,$0.99,,,,$0.99 $0 . 99 $0.25 per count ( $0.25 $0.25 / count),standard_price,in_stock,4.5,success
+amazon|188|20260722_000506,20260721_224008,2026-07-22 00:05:06,Amazon,188,"bananas, organic",https://www.amazon.com/Dole-Organic-Banana-Bunch/dp/B07ZLF9G83/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.37,$1.49,,,,$1.49 $1 . 49 $0.37 per count ( $0.37 $0.37 / count),standard_price,in_stock,4.5,success
+amazon|190|20260722_000710,20260721_224008,2026-07-22 00:07:10,Amazon,190,"apple, honeycrisp",https://www.amazon.com/Fresh-Brand-Honeycrisp-Apples/dp/B07XW1BZR5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.66,$7.99,,,,$7.99 $7 . 99 $2.66 per lb ( $2.66 $2.66 / lb),standard_price,in_stock,4.6,success
+amazon|191|20260722_000754,20260721_224008,2026-07-22 00:07:54,Amazon,191,"apple, honeycrisp, organic",https://www.amazon.com/Fresh-Brand-Organic-Honeycrisp-Apples/dp/B08GHD4KHX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.00,$7.99,,,,$7.99 $7 . 99 $4.00 per lb ( $4.00 $4.00 / lb),standard_price,in_stock,4.7,success
+amazon|192|20260722_000837,20260721_224008,2026-07-22 00:08:37,Amazon,192,blueberries,https://www.amazon.com/Fresh-Produce-Brands-Vary-100174/dp/B003AYKYIG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.03,$1.97,,,,$1.97 $1 . 97 $3.03 per lb ( $3.03 $3.03 / lb),standard_price,in_stock,4.7,success
+amazon|193|20260722_000921,20260721_224008,2026-07-22 00:09:21,Amazon,193,"blueberries, organic",https://www.amazon.com/produce-aisle-112042-Organic-Blueberries/dp/B077N7TR5G/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.28,$3.96,,,,$3.96 $3 . 96 $5.28 per lb ( $5.28 $5.28 / lb),standard_price,in_stock,4.7,success
+amazon|194|20260722_001004,20260721_224008,2026-07-22 00:10:04,Amazon,194,"blueberries, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-Blueberries/dp/B08YJ3D6CQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$2.53,,,,$2.53 $2 . 53 $0.16 per ounce ( $0.16 $0.16 / ounce),standard_price,in_stock,4.6,success
+amazon|196|20260722_001048,20260721_224008,2026-07-22 00:10:48,Amazon,196,strawberries,https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B000P6J0SM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.58,$2.58,,,,$2.58 $2 . 58 $2.58 per lb ( $2.58 $2.58 / lb),standard_price,in_stock,4.6,success
+amazon|197|20260722_001131,20260721_224008,2026-07-22 00:11:31,Amazon,197,"strawberries, organic",https://www.amazon.com/Fresh-Produce-Brands-Vary-040/dp/B002B8Z98W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.53,$3.53,,,,$3.53 $3 . 53 $3.53 per lb ( $3.53 $3.53 / lb),standard_price,in_stock,4.6,success
+amazon|198|20260722_001216,20260721_224008,2026-07-22 00:12:16,Amazon,198,"strawberries, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-Strawberries/dp/B08YJ35DJZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$2.86,,,,$2.86 $2 . 86 $0.18 per ounce ( $0.18 $0.18 / ounce),standard_price,in_stock,4.6,success
+amazon|201|20260722_001259,20260721_224008,2026-07-22 00:12:59,Amazon,201,"raspberries, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-Raspberries/dp/B08YHYLM1L/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.30,$4.79,,,,$4.79 $4 . 79 $0.30 per ounce ( $0.30 $0.30 / ounce),standard_price,in_stock,4.7,success
+amazon|202|20260722_001345,20260721_224008,2026-07-22 00:13:45,Amazon,202,blackberries,https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B07GM88NWG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.59,$4.94,,,,$4.94 $4 . 94 $6.59 per lb ( $6.59 $6.59 / lb),standard_price,in_stock,4.7,success
+amazon|203|20260722_001428,20260721_224008,2026-07-22 00:14:28,Amazon,203,"blackberries, organic",https://www.amazon.com/produce-aisle-040-01021-Organic-Blackberries/dp/B00E3JM7UU/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$10.29,$3.86,,,,$3.86 $3 . 86 $10.29 per lb ( $10.29 $10.29 / lb),standard_price,in_stock,4.7,success
+amazon|204|20260722_001511,20260721_224008,2026-07-22 00:15:11,Amazon,204,cherries,https://www.amazon.com/Fresh-Produce-Brands-Vary-mburring/dp/B003AYKZF8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.50,$2.50,,($0.13/ounce),$0.13,$2.50 $2 . 50 $2.50 per lb ( $2.50 $2.50 / lb),standard_price,in_stock,4.5,success
+amazon|205|20260722_001555,20260721_224008,2026-07-22 00:15:55,Amazon,205,"cherries, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-Cherries/dp/B08YJ4ZMZW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$3.82,,,,$3.82 $3 . 82 $0.24 per ounce ( $0.24 $0.24 / ounce),standard_price,in_stock,4.6,success
+amazon|206|20260722_001640,20260721_224008,2026-07-22 00:16:40,Amazon,206,"mango, large",https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B003AYKZ1W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.50,$1.50,,,,$1.50 $1 . 50 $1.50 per count ( $1.50 $1.50 / count),standard_price,in_stock,4.3,success
+amazon|207|20260722_001725,20260721_224008,2026-07-22 00:17:25,Amazon,207,"mango, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-Chunked/dp/B08YHT8GTX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$2.90,,,,$2.90 $2 . 90 $0.18 per ounce ( $0.18 $0.18 / ounce),standard_price,in_stock,4.6,success
+amazon|208|20260722_001808,20260721_224008,2026-07-22 00:18:08,Amazon,208,"avocado, hass",https://www.amazon.com/produce-aisle-411048-Avocado-Large/dp/B000P72UZG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.89,$1.89,,,,$1.89 $1 . 89 $1.89 per count ( $1.89 $1.89 / count),standard_price,in_stock,4.6,success
+amazon|209|20260722_001853,20260721_224008,2026-07-22 00:18:53,Amazon,209,"mushrooms, white",https://www.amazon.com/Fresh-Brand-Whole-White-Mushrooms/dp/B07XW1RWXG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.88,$1.94,,,,$1.94 $1 . 94 $3.88 per lb ( $3.88 $3.88 / lb),standard_price,in_stock,4.8,success
+amazon|210|20260722_001936,20260721_224008,2026-07-22 00:19:36,Amazon,210,"mushrooms, white, organic",https://www.amazon.com/Fresh-Brand-Organic-Whole-Mushrooms/dp/B07XW1BZRN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.46,,,$2.67,$2.67,$2.46,standard_price,out_of_stock,4.7,success
+amazon|212|20260722_002040,20260721_224008,2026-07-22 00:20:40,Amazon,212,"watermelon, seedless",https://www.amazon.com/Produce-PRODUCE-Seedless-Watermelon/dp/B07FZ13DGW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.99,$7.99,,$9.95 for 2-hour delivery with Prime,$9.95,$7.99 $7 . 99 ( $7.99 $7.99 / count),standard_price,in_stock,4.2,success
+amazon|213|20260722_002123,20260721_224008,2026-07-22 00:21:23,Amazon,213,"watermelon, seedless, precut",https://www.amazon.com/Fresh-Brand-Cut-Watermelon-32/dp/B083318PX6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$7.57,,,,$7.57 $7 . 57 $0.24 per ounce ( $0.24 $0.24 / ounce),standard_price,in_stock,4.3,success
+amazon|214|20260722_002206,20260721_224008,2026-07-22 00:22:06,Amazon,214,pineapple,https://www.amazon.com/produce-aisle-013-01416-Gold-Pineapple/dp/B000P6L3V4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.34,$2.34,,,,$2.34 $2 . 34 $2.34 per count ( $2.34 $2.34 / count),standard_price,in_stock,4.4,success
+amazon|215|20260722_002250,20260721_224008,2026-07-22 00:22:50,Amazon,215,"pineapple, precut",https://www.amazon.com/Fresh-Brand-Cubed-Pineapple-32/dp/B08332J6N5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.21,$6.78,,,,$6.78 $6 . 78 $0.21 per ounce ( $0.21 $0.21 / ounce),standard_price,in_stock,4.5,success
+amazon|216|20260722_002333,20260721_224008,2026-07-22 00:23:33,Amazon,216,"pineapple, frozen",https://www.amazon.com/Amazon-Fresh-Frozen-Pineapple-Chunks/dp/B0BZTNLW3N/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$2.82,,,,$2.82 $2 . 82 $0.18 per ounce ( $0.18 $0.18 / ounce),standard_price,in_stock,4.7,success
+amazon|218|20260722_002417,20260721_224008,2026-07-22 00:24:17,Amazon,218,"green beans, cut, canned",https://www.amazon.com/Amazon-Fresh-Canned-Green-Beans/dp/B0BZJP9YMN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$0.79,,Save 15%: Coupon available when you select Subscribe & Save . Shop items | Terms,15%,$0.79 $0 . 79 $0.05 per ounce ( $0.05 $0.05 / ounce),standard_price,in_stock,4.5,success
+amazon|220|20260722_002441,20260721_224008,2026-07-22 00:24:41,Amazon,220,"green beans, organic",https://www.amazon.com/Bean-French-Organic-16-Ounce/dp/B07FYWTFCM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.72,$6.72,,,,$6.72 $6 . 72 $6.72 per lb ( $6.72 $6.72 / lb),standard_price,in_stock,4.4,success
+amazon|221|20260722_002524,20260721_224008,2026-07-22 00:25:24,Amazon,221,"green beans, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-ounces/dp/B07WQVJ992/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.28,$0.96,,,,$0.96 $0 . 96 $1.28 per lb ( $1.28 $1.28 / lb),standard_price,in_stock,4.7,success
+amazon|222|20260722_002728,20260721_224008,2026-07-22 00:27:28,Amazon,222,asparagus,https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B00E3J9QSG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.57,$3.57,,,,$3.57 $3 . 57 $3.57 per count ( $3.57 $3.57 / count),standard_price,in_stock,4.6,success
+amazon|224|20260722_002812,20260721_224008,2026-07-22 00:28:12,Amazon,224,"asparagus, frozen",https://www.amazon.com/Birds-Eye-Steamfresh-Asparagus-steamable/dp/B00OE7SPF2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.34,$3.67,,,,$3.67 $3 . 67 $7.34 per lb ( $7.34 $7.34 / lb),standard_price,in_stock,4.6,success
+amazon|225|20260722_002856,20260721_224008,2026-07-22 00:28:56,Amazon,225,"pumpkin puree, canned",https://www.amazon.com/Amazon-Fresh-Canned-Pumpkin/dp/B0D1LG7TQ7/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.12,$1.76,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.76 $1 . 76 ( $0.12 $0.12 / ounce),standard_price,in_stock,4.6,success
+amazon|226|20260722_002939,20260721_224008,2026-07-22 00:29:39,Amazon,226,butternut squash,https://www.amazon.com/produce-aisle-101012-Butternut-Squash/dp/B000P6H1Z6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.07,$5.07,,($0.26/ounce),$0.26,$5.07 $5 . 07 $5.07 per count ( $5.07 $5.07 / count),standard_price,in_stock,4.5,success
+amazon|227|20260722_003023,20260721_224008,2026-07-22 00:30:23,Amazon,227,"butternut squash, organic",https://www.amazon.com/Organic-Butternut-Squash-One-Large/dp/B002QY3U5A/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.97,$4.97,,,,$4.97 $4 . 97 $4.97 per count ( $4.97 $4.97 / count),standard_price,in_stock,4.7,success
+amazon|228|20260722_003106,20260721_224008,2026-07-22 00:31:06,Amazon,228,"butternut squash, frozen",https://www.amazon.com/Amazon-Fresh-FROZEN-BUTTERNUT-SQUASH/dp/B09TGFTG3G/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.49,$2.49,,,,$2.49 $2 . 49 $2.49 per count ( $2.49 $2.49 / count),standard_price,in_stock,4.6,success
+amazon|230|20260722_003149,20260721_224008,2026-07-22 00:31:49,Amazon,230,"cauliflower, florets",https://www.amazon.com/365-Everyday-Value-Cauliflower-Florets/dp/B077L7S52W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.31,$2.48,,,,$2.48 $2 . 48 $3.31 per lb ( $3.31 $3.31 / lb),standard_price,in_stock,4.6,success
+amazon|231|20260722_003233,20260721_224008,2026-07-22 00:32:33,Amazon,231,"cauliflower, florets, organic",https://www.amazon.com/365-Everyday-Value-Organic-Cauliflower/dp/B077L639WX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.37,$3.98,,,,$3.98 $3 . 98 $6.37 per lb ( $6.37 $6.37 / lb),standard_price,in_stock,4.6,success
+amazon|232|20260722_003316,20260721_224008,2026-07-22 00:33:16,Amazon,232,"cauliflower, florets, frozen",https://www.amazon.com/Amazon-Brand-Frozen-Cauliflower-Floret/dp/B07WSBR61J/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.48,$1.11,,,,$1.11 $1 . 11 $1.48 per lb ( $1.48 $1.48 / lb),standard_price,in_stock,4.7,success
+amazon|233|20260722_003400,20260721_224008,2026-07-22 00:34:00,Amazon,233,"cauliflower, florets, frozen, organic",https://www.amazon.com/365-Everyday-Value-Organic-Cauliflower/dp/B074H5HG49/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.58,$2.58,,,,$2.58 $2 . 58 $2.58 per lb ( $2.58 $2.58 / lb),standard_price,in_stock,4.7,success
+amazon|235|20260722_004206,20260721_224008,2026-07-22 00:42:06,Amazon,235,"oats, rolled, organic",https://www.amazon.com/365-Everyday-Value-Oatmeal-Canister/dp/B07NSRHMPR/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$4.29,,Save 15%: Coupon available when you select Subscribe & Save . Shop items | Terms,15%,$4.29 $4 . 29 $0.24 per ounce ( $0.24 $0.24 / ounce),standard_price,in_stock,4.6,success
+amazon|236|20260722_004230,20260721_224008,2026-07-22 00:42:30,Amazon,236,"oats, rolled, organic, bob's red mill",https://www.amazon.com/bob's-Red-Mill-Organic-Fashioned/dp/B07BRXFXCR/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$5.98,,FREE 2-hour delivery on orders over $100 with Prime,$100,$5.98 $5 . 98 ( $0.19 $0.19 / ounce),standard_price,unknown,4.8,success
+amazon|237|20260722_004304,20260721_224008,2026-07-22 00:43:04,Amazon,237,"rice, long grain, brown",https://www.amazon.com/Happy-Belly-Brown-Rice/dp/B08C92WFWG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$3.76,,,,$3.76 $3 . 76 $0.05 per ounce ( $0.05 $0.05 / ounce),standard_price,in_stock,4.5,success
+amazon|239|20260722_004348,20260721_224008,2026-07-22 00:43:48,Amazon,239,"rice, long grain, white",https://www.amazon.com/Amazon-Grocery-Enriched-Previously-Packaging/dp/B08C8WMK6N/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.04,$3.03,,,,$3.03 $3 . 03 $0.04 per ounce ( $0.04 $0.04 / ounce),standard_price,in_stock,4.7,success
+amazon|243|20260722_004432,20260721_224008,2026-07-22 00:44:32,Amazon,243,"bread, whole wheat, sliced",https://www.amazon.com/Amazon-Fresh-White-Round-Bread/dp/B0BNS2LQX6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.07,$1.39,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.39 $1 . 39 ( $0.07 $0.07 / ounce),standard_price,in_stock,4.5,success
+amazon|246|20260722_004515,20260721_224008,2026-07-22 00:45:15,Amazon,246,bagels,https://www.amazon.com/Amazon-Fresh-Plain-Sliced-Bagels/dp/B0DP1GG6VY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$2.18,,,,$2.18 $2 . 18 $0.10 per ounce ( $0.10 $0.10 / ounce),standard_price,in_stock,4.6,success
+amazon|247|20260722_004559,20260721_224008,2026-07-22 00:45:59,Amazon,247,"bagels, blueberry, sola",https://www.amazon.com/Sola-Carb-Friendly-Bagels-Blueberry/dp/B0B4BQFY4M/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$11.00,$32.99,,,,$32.99 $32 . 99 $11.00 per count ( $11.00 $11.00 / count),standard_price,in_stock,4.4,success
+amazon|249|20260722_004803,20260721_224008,2026-07-22 00:48:03,Amazon,249,"buns, hot dog",https://www.amazon.com/Amazon-Fresh-White-Buns-Ounce/dp/B0BNS39WHT/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.13,$1.59,,,,$1.59 $1 . 59 $0.13 per ounce ( $0.13 $0.13 / ounce),standard_price,in_stock,4.5,success
+amazon|251|20260722_004928,20260721_224008,2026-07-22 00:49:28,Amazon,251,"rolls, sweet hawaiian",https://www.amazon.com/Amazon-Grocery-Hawaiian-Previously-Packaging/dp/B09WZTGT4X/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$2.45,,,,$2.45 $2 . 45 $0.20 per count ( $0.20 $0.20 / count),standard_price,in_stock,4.5,success
+amazon|252|20260722_005013,20260721_224008,2026-07-22 00:50:13,Amazon,252,"pie crust, graham",https://www.amazon.com/Amazon-Fresh-Graham-Cracker-Crust/dp/B09NRGFY8P/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.23,$1.38,,,,$1.38 $1 . 38 $0.23 per ounce ( $0.23 $0.23 / ounce),standard_price,in_stock,4.6,success
+amazon|253|20260722_005056,20260721_224008,2026-07-22 00:50:56,Amazon,253,stuffing mix,https://www.amazon.com/Amazon-Fresh-Chicken-Flavored-Stuffing/dp/B09SHP19D8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.21,$1.25,,,,$1.25 $1 . 25 $0.21 per ounce ( $0.21 $0.21 / ounce),standard_price,in_stock,4.5,success
+amazon|254|20260722_005140,20260721_224008,2026-07-22 00:51:40,Amazon,254,"cereal, frosted flakes",https://www.amazon.com/Amazon-Fresh-Frosted-Flakes-Sweetened/dp/B0CTP8ZSF3/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.13,$1.76,,,,$1.76 $1 . 76 $0.13 per ounce ( $0.13 $0.13 / ounce),standard_price,in_stock,4.6,success
+amazon|256|20260722_005224,20260721_224008,2026-07-22 00:52:24,Amazon,256,"cereal, honey nut o",https://www.amazon.com/Amazon-Brand-Happy-Toasted-12-5 oz/dp/B07RW2S492/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$1.94,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.94 $1 . 94 ( $0.16 $0.16 / ounce),standard_price,in_stock,4.5,success
+amazon|257|20260722_005308,20260721_224008,2026-07-22 00:53:08,Amazon,257,"cereal, honey nut o, cheerios",https://www.amazon.com/Honey-Cheerios-Gluten-Free-Cereal/dp/B07CZCM4VZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.32,$3.47,,,,$3.47 $3 . 47 $0.32 per ounce ( $0.32 $0.32 / ounce),standard_price,in_stock,4.8,success
+amazon|259|20260722_005352,20260721_224008,2026-07-22 00:53:52,Amazon,259,"granola, chocolate, purely elizabeth",https://www.amazon.com/Purely-Elizabeth-Cookie-Granola-Chocolate/dp/B0CJST852Q/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.63,$6.92,,,,$6.92 $6 . 92 $0.63 per ounce ( $0.63 $0.63 / ounce),standard_price,in_stock,4.5,success
+amazon|260|20260722_005438,20260721_224008,2026-07-22 00:54:38,Amazon,260,mac and cheese,https://www.amazon.com/Amazon-Brand-Original-Macaroni-Cheese/dp/B09BK31N7J/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$0.64,,FREE 2-hour delivery on orders over $100 with Prime,$100,$0.64 $0 . 64 ( $0.09 $0.09 / ounce),standard_price,in_stock,4.2,success
+amazon|261|20260722_005521,20260721_224008,2026-07-22 00:55:21,Amazon,261,"vegan mac, cheddar, daiya",https://www.amazon.com/Daiya-Cheese-Cheddar-Deluxe-10-6/dp/B01GUPABIO/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.97,,,,,$3.97,standard_price,in_stock,4.4,success
+amazon|262|20260722_005835,20260721_224008,2026-07-22 00:58:35,Amazon,262,"mac and cheese, cheddar, annies",https://www.amazon.com/Annies-Macaroni-Cheese-Classic-Cheddar/dp/B000VHETR2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.25,$1.48,,$15.85,$15.85,$1.48 $1 . 48 ( $0.25 $0.25 / ounce),standard_price,in_stock,4.6,success
+amazon|263|20260722_005902,20260721_224008,2026-07-22 00:59:02,Amazon,263,"vegan mac and cheese, cheddar, annies",https://www.amazon.com/Annies-Organic-Cheddar-Flavor-Vegan/dp/B073WF53RR/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.55,$3.29,,,,$3.29 $3 . 29 $0.55 per ounce ( $0.55 $0.55 / ounce),standard_price,in_stock,4.5,success
+amazon|265|20260722_005945,20260721_224008,2026-07-22 00:59:45,Amazon,265,"mac and cheese, kraft",https://www.amazon.com/Kraft-Original-Flavor-Macaroni-Cheese/dp/B000PXZZQG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.00,$1.00,,,,$1.00 $1 . 00 $1.00 per count ( $1.00 $1.00 / count),standard_price,in_stock,4.7,success
+amazon|266|20260722_010029,20260721_224008,2026-07-22 01:00:29,Amazon,266,"bread, challah",https://www.amazon.com/Sterns-Bakery-Challah-Bread-15-Traditional/dp/B07Y419FR8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.78,$24.99,,($1.28/ounce),$1.28,$24.99 $24 . 99 $0.78 per ounce ( $0.78 $0.78 / ounce),standard_price,in_stock,4.3,success
+amazon|267|20260722_010112,20260721_224008,2026-07-22 01:01:12,Amazon,267,lentils,https://www.amazon.com/Amazon-Fresh-REGULAR-LENTIL-WHOLE/dp/B09SHLXK12/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$1.43,,,,$1.43 $1 . 43 $0.09 per ounce ( $0.09 $0.09 / ounce),standard_price,in_stock,4.7,success
+amazon|271|20260722_010156,20260721_224008,2026-07-22 01:01:56,Amazon,271,chickpeas (garbanzos),https://www.amazon.com/Amazon-Fresh-REGULAR-GARBANZO-WHOLE/dp/B09SHBKHTH/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$1.43,,,,$1.43 $1 . 43 $0.09 per ounce ( $0.09 $0.09 / ounce),standard_price,in_stock,4.7,success
+amazon|273|20260722_010240,20260721_224008,2026-07-22 01:02:40,Amazon,273,pinto beans,https://www.amazon.com/Amazon-Fresh-REGULAR-PINTO-WHOLE/dp/B09SHGC91R/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.07,$1.07,,,,$1.07 $1 . 07 $0.07 per ounce ( $0.07 $0.07 / ounce),standard_price,in_stock,4.7,success
+amazon|275|20260722_010324,20260721_224008,2026-07-22 01:03:24,Amazon,275,black beans,https://www.amazon.com/Amazon-Fresh-REGULAR-BLACK-WHOLE/dp/B09SHHYCXW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.09,$1.50,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.50 $1 . 50 ( $0.09 $0.09 / ounce),standard_price,in_stock,4.7,success
+amazon|279|20260722_010408,20260721_224008,2026-07-22 01:04:08,Amazon,279,"pinto beans, canned",https://www.amazon.com/Amazon-Fresh-Canned-Pinto-Beans/dp/B0BZB9D92K/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$0.90,,,,$0.90 $0 . 90 $0.06 per ounce ( $0.06 $0.06 / ounce),standard_price,in_stock,4.6,success
+amazon|280|20260722_010453,20260721_224008,2026-07-22 01:04:53,Amazon,280,"black beans, canned",https://www.amazon.com/Amazon-Fresh-Canned-Black-Beans/dp/B0BZBJKT39/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$0.86,,FREE 2-hour delivery on orders over $100 with Prime,$100,$0.86 $0 . 86 ( $0.06 $0.06 / ounce),standard_price,in_stock,4.7,success
+amazon|281|20260722_010537,20260721_224008,2026-07-22 01:05:37,Amazon,281,"kidney beans, canned",https://www.amazon.com/Amazon-Fresh-Canned-Kidney-Beans/dp/B0BZB4FL11/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$0.90,,FREE 2-hour delivery on orders over $100 with Prime,$100,$0.90 $0 . 90 ( $0.06 $0.06 / ounce),standard_price,in_stock,4.7,success
+amazon|282|20260722_010621,20260721_224008,2026-07-22 01:06:21,Amazon,282,"chickpeas (garbanzos), canned",https://www.amazon.com/Amazon-Fresh-Canned-Chick-Garbanzo/dp/B0BZBJRBY7/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$0.89,,,,$0.89 $0 . 89 $0.06 per ounce ( $0.06 $0.06 / ounce),standard_price,in_stock,4.6,success
+amazon|283|20260722_010825,20260721_224008,2026-07-22 01:08:25,Amazon,283,"vegan burger patties, impossible",https://www.amazon.com/Impossible-Foods-Impossible-Burger-Patties/dp/B09C15M76H/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.54,$12.99,,"$2 off coupon applied    Shop items   .cxcwEmphasisLink { padding-left: 6px; padding-right: 12px !important; display: inline-block; } .cxcwEmphasisLink::after { bottom: 6.5px !important; margin-left: 2px !important; }   |    Terms    [data-selector=""cxcwPopoverLink""] { padding-left: 6px; padding-right: 6px; }",$2,$12.99 $12 . 99 $0.54 per ounce ( $0.54 $0.54 / ounce),standard_price,in_stock,4.7,success
+amazon|284|20260722_010849,20260721_224008,2026-07-22 01:08:49,Amazon,284,"vegan sausage, bratwurst, beyond meat",https://www.amazon.com/Beyond-Meat-Sausage-Original-PARENT/dp/B07B6HV451/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.97,$6.97,,,,$6.97 $6 . 97 $7.97 per lb ( $7.97 $7.97 / lb),standard_price,in_stock,4.6,success
+amazon|285|20260722_010933,20260721_224008,2026-07-22 01:09:33,Amazon,285,"vegan sausage, hot italian, beyond meat",https://www.amazon.com/Beyond-Meat-Sausage-Italian-PARENT/dp/B07B698Z1F/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.97,$6.97,,,,$6.97 $6 . 97 $7.97 per lb ( $7.97 $7.97 / lb),standard_price,in_stock,4.6,success
+amazon|286|20260722_011017,20260721_224008,2026-07-22 01:10:17,Amazon,286,"vegan sausage, breakfast, beyond meat",https://www.amazon.com/BEYOND-MEAT-Breakfast-Sausage-Links/dp/B0G9BFKGJ2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.93,$7.45,,,,$7.45 $7 . 45 $0.93 per count ( $0.93 $0.93 / count),standard_price,in_stock,3.9,success
+amazon|287|20260722_011100,20260721_224008,2026-07-22 01:11:00,Amazon,287,"potato chips, salt",https://www.amazon.com/Amazon-Brand-Happy-Salted-Potato/dp/B07X1KPLNQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.29,$3.23,,,,$3.23 $3 . 23 $0.29 per ounce ( $0.29 $0.29 / ounce),standard_price,in_stock,4.4,success
+amazon|288|20260722_011144,20260721_224008,2026-07-22 01:11:44,Amazon,288,"tortilla chips, salt",https://www.amazon.com/Amazon-Brand-Happy-Restaurant-Tortilla/dp/B07WZFVWHD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.14,$2.87,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.87 $2 . 87 ( $0.14 $0.14 / ounce),standard_price,in_stock,4.4,success
+amazon|290|20260722_011227,20260721_224008,2026-07-22 01:12:27,Amazon,290,"cookies, chocolate chips",https://www.amazon.com/Amazon-Brand-Premium-Chocolate-Cookies/dp/B07WNSKSQF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.23,$2.94,,,,$2.94 $2 . 94 $0.23 per ounce ( $0.23 $0.23 / ounce),standard_price,in_stock,4.3,success
+amazon|292|20260722_011312,20260721_224008,2026-07-22 01:13:12,Amazon,292,"cookies, chocolate chips, tate's bake shop",https://www.amazon.com/Fresh-Brand-Chocolate-Cookies-FROZEN/dp/B08MVXNKR3/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.42,$5.07,,,,$5.07 $5 . 07 $0.42 per count ( $0.42 $0.42 / count),standard_price,in_stock,4.4,success
+amazon|293|20260722_011356,20260721_224008,2026-07-22 01:13:56,Amazon,293,"ice cream, vanilla",https://www.amazon.com/Amazon-Fresh-Cream-Vanilla-48oz/dp/B0CFWW6TMD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$2.50,,,,$2.50 $2 . 50 $0.05 per fluid ounce ( $0.05 $0.05 / fluid ounce),standard_price,in_stock,4.6,success
+amazon|296|20260722_011440,20260721_224008,2026-07-22 01:14:40,Amazon,296,"peanut butter cups, king size, reese's",https://www.amazon.com/REESES-Peanut-Butter-Cups-1-5 oz/dp/B0014CUFBM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.08,$1.62,,,,$1.62 $1 . 62 $1.08 per ounce ( $1.08 $1.08 / ounce),standard_price,in_stock,4.5,success
+amazon|298|20260722_011523,20260721_224008,2026-07-22 01:15:23,Amazon,298,"candy bar mix, mini, mars",https://www.amazon.com/SNICKERS-MUSKETEERS-Chocolate-Variety-Sharing/dp/B0CHXKY1HD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.72,$5.97,,,,$5.97 $5 . 97 $0.72 per ounce ( $0.72 $0.72 / ounce),standard_price,in_stock,4.6,success
+amazon|299|20260722_011606,20260721_224008,2026-07-22 01:16:06,Amazon,299,"candy mix, organic, yumearth organic",https://www.amazon.com/YumEarth-Organic-Variety-Box-Individually/dp/B0DQYV4QQS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.50,$14.98,,($0.45/ounce),$0.45,$14.98 $14 . 98 $1.50 per ounce ( $1.50 $1.50 / ounce),standard_price,in_stock,4.6,success
+amazon|300|20260722_011652,20260721_224008,2026-07-22 01:16:52,Amazon,300,"sour patch kids and swedish fish mini soft & chewy candy variety, bulk candy, 80 snack packs",https://www.amazon.com/PATCH-SWEDISH-Chewy-Variety-Valentines/dp/B0D8RDCJ52/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.61,$21.88,,,,$21.88 $21 . 88 $0.61 per ounce ( $0.61 $0.61 / ounce),standard_price,in_stock,4.8,success
+amazon|301|20260722_011737,20260721_224008,2026-07-22 01:17:37,Amazon,301,"peanut butter, creamy",https://www.amazon.com/Amazon-Brand-Creamy-Peanut-Butter/dp/B07KWH27FN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.12,$1.98,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.98 $1 . 98 ( $0.12 $0.12 / ounce),standard_price,in_stock,4.6,success
+amazon|302|20260722_011901,20260721_224008,2026-07-22 01:19:01,Amazon,302,"peanut butter, creamy, organic",https://www.amazon.com/365-Everyday-Value-Organic-Unsweeteend/dp/B074H5ZHVZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.31,$4.99,,,,$4.99 $4 . 99 $0.31 per ounce ( $0.31 $0.31 / ounce),standard_price,in_stock,4.4,success
+amazon|303|20260722_011945,20260721_224008,2026-07-22 01:19:45,Amazon,303,"almond butter, no sugar",https://www.amazon.com/365-Everyday-Value-Almond-Butter/dp/B074H51QN4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.47,$7.49,,,,$7.49 $7 . 49 $0.47 per ounce ( $0.47 $0.47 / ounce),standard_price,in_stock,4.4,success
+amazon|304|20260722_012110,20260721_224008,2026-07-22 01:21:10,Amazon,304,"dr pepper zero, cherry, cans",https://www.amazon.com/DR-PEPPER-Cherry-Zero-Sugar/dp/B08XXMZY4V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$8.62,,,,$8.62 $8 . 62 $0.06 per fluid ounce ( $0.06 $0.06 / fluid ounce),standard_price,in_stock,4.5,success
+amazon|305|20260722_012153,20260721_224008,2026-07-22 01:21:53,Amazon,305,"dr pepper zero, cans",https://www.amazon.com/DR-PEPPER-Zero-Sugar-Soda/dp/B08XXGB5NK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.06,$8.62,,$3.62 coupon,$3.62,$8.62 $8 . 62 $0.06 per fluid ounce ( $0.06 $0.06 / fluid ounce),standard_price,in_stock,4.5,success
+amazon|308|20260722_012236,20260721_224008,2026-07-22 01:22:36,Amazon,308,"creatine, sunwarrior",https://www.amazon.com/Micronized-Creatine-Monohydrate-Building-Sunwarrior/dp/B09MR5D5YS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.27,$23.97,,,,$23.97 $23 . 97 $2.27 per ounce ( $2.27 $2.27 / ounce),standard_price,in_stock,4.8,success
+amazon|310|20260722_012321,20260721_224008,2026-07-22 01:23:21,Amazon,310,"flax seed, whole, organic, bob's red mill",https://www.amazon.com/bob's-Red-Mill-Flaxseed-Brown/dp/B075XGG83Z/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.62,$8.05,,,,$8.05 $8 . 05 $0.62 per ounce ( $0.62 $0.62 / ounce),standard_price,in_stock,4.7,success
+amazon|311|20260722_012406,20260721_224008,2026-07-22 01:24:06,Amazon,311,"chia seeds, organic",https://www.amazon.com/Happy-Belly-Organic-Black-Seeds/dp/B08C8RCWXN/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.36,$5.75,,FREE 2-hour delivery on orders over $100 with Prime,$100,$5.75 $5 . 75 ( $0.36 $0.36 / ounce),standard_price,in_stock,4.7,success
+amazon|312|20260722_012449,20260721_224008,2026-07-22 01:24:49,Amazon,312,"walnuts, shelled",https://www.amazon.com/Amazon-Fresh-Walnuts-Halves-Pieces/dp/B0CN1NYJB6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.41,$6.49,,($0.80/ounce),$0.80,$6.49 $6 . 49 $0.41 per ounce ( $0.41 $0.41 / ounce),standard_price,in_stock,4.0,success
+amazon|313|20260722_012523,20260721_224008,2026-07-22 01:25:23,Amazon,313,almonds,https://www.amazon.com/Amazon-Brand-Happy-Belly-Almonds/dp/B01E60RI6S/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.41,$19.45,,,,$19.45 $19 . 45 $0.41 per ounce ( $0.41 $0.41 / ounce),standard_price,in_stock,4.5,success
+amazon|314|20260722_012607,20260721_224008,2026-07-22 01:26:07,Amazon,314,"pecan, shelled",https://www.amazon.com/Happy-Belly-Pecan-Halves-16/dp/B089HFR93L/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.68,$10.93,,,,$10.93 $10 . 93 $0.68 per ounce ( $0.68 $0.68 / ounce),standard_price,in_stock,4.6,success
+amazon|315|20260722_012652,20260721_224008,2026-07-22 01:26:52,Amazon,315,"turmeric, ground",https://www.amazon.com/Amazon-Grocery-Turmeric-Previously-Packaging/dp/B07W1WWT5D/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.95,$2.62,,,,$2.62 $2 . 62 $0.95 per oz ( $0.95 $0.95 / oz),standard_price,in_stock,4.7,success
+amazon|317|20260722_012856,20260721_224008,2026-07-22 01:28:56,Amazon,317,"cinnamon, ground",https://www.amazon.com/Amazon-Brand-Cinnamon-Ground-Ounces/dp/B07W1WVMDM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.51,$1.27,,,,$1.27 $1 . 27 $0.51 per oz ( $0.51 $0.51 / oz),standard_price,in_stock,4.8,success
+amazon|319|20260722_012940,20260721_224008,2026-07-22 01:29:40,Amazon,319,poppy seeds,https://www.amazon.com/Amazon-Grocery-Poppy-Seed-3-5/dp/B07VXL274B/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.71,$2.48,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.48 $2 . 48 ( $0.71 $0.71 / ounce),standard_price,in_stock,4.8,success
+amazon|322|20260722_013024,20260721_224008,2026-07-22 01:30:24,Amazon,322,bulgur,https://www.amazon.com/Nap-Boule-Ble-Bulgur-Wheat/dp/B084VRQSJV/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$8.99,,($0.30/ounce),$0.30,$8.99 $8 . 99 $0.16 per ounce ( $0.16 $0.16 / ounce),standard_price,in_stock,4.6,success
+amazon|323|20260722_013108,20260721_224008,2026-07-22 01:31:08,Amazon,323,honey,https://www.amazon.com/Amazon-Brand-Clover-Previously-Solimo/dp/B07QS75JWW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.36,$4.29,,,,$4.29 $4 . 29 $0.36 per ounce ( $0.36 $0.36 / ounce),standard_price,in_stock,4.8,success
+amazon|324|20260722_013152,20260721_224008,2026-07-22 01:31:52,Amazon,324,raisins,https://www.amazon.com/Amazon-Brand-Happy-Belly-Raisins/dp/B08X2BRT1X/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$2.86,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.86 $2 . 86 ( $0.24 $0.24 / ounce),standard_price,in_stock,4.6,success
+amazon|326|20260722_013235,20260721_224008,2026-07-22 01:32:35,Amazon,326,"cranberries, dried, sweetened",https://www.amazon.com/Amazon-Brand-Happy-Belly-Cranberries/dp/B08X27MZP5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.30,$2.39,,,,$2.39 $2 . 39 $0.30 per ounce ( $0.30 $0.30 / ounce),standard_price,in_stock,4.7,success
+amazon|330|20260722_013319,20260721_224008,2026-07-22 01:33:19,Amazon,330,"cabbage, green",https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B07PSVHCQM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.59,$2.59,,,,$2.59 $2 . 59 $2.59 per count ( $2.59 $2.59 / count),standard_price,in_stock,4.6,success
+amazon|331|20260722_013402,20260721_224008,2026-07-22 01:34:02,Amazon,331,"cabbage, green, organic",https://www.amazon.com/Organic-Green-Cabbage-1-Head/dp/B09HQGDCKV/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$4.20,$4.20,,,,$4.20 $4 . 20 $4.20 per count ( $4.20 $4.20 / count),standard_price,in_stock,4.6,success
+amazon|332|20260722_013446,20260721_224008,2026-07-22 01:34:46,Amazon,332,"sour cream, daisy",https://www.amazon.com/00006-Daisy-Regular-Sour-Cream/dp/B009PIBV3I/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$1.50,,,,$1.50 $1 . 50 $0.19 per ounce ( $0.19 $0.19 / ounce),standard_price,in_stock,4.8,success
+amazon|333|20260722_013529,20260721_224008,2026-07-22 01:35:29,Amazon,333,sour cream,https://www.amazon.com/Amazon-Fresh-Sour-Cream-oz/dp/B0D649LG9K/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.17,$1.37,,,,$1.37 $1 . 37 $0.17 per ounce ( $0.17 $0.17 / ounce),standard_price,in_stock,4.7,success
+amazon|336|20260722_013612,20260721_224008,2026-07-22 01:36:12,Amazon,336,"dill, organic",https://www.amazon.com/Amazon-Grocery-Previously-Fresh-Packaging/dp/B097F49L2V/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.98,$1.99,,,,$1.99 $1 . 99 $3.98 per ounce ( $3.98 $3.98 / ounce),standard_price,in_stock,4.7,success
+amazon|337|20260722_013656,20260721_224008,2026-07-22 01:36:56,Amazon,337,"farmer cheese, lifeway",https://www.amazon.com/Lifeway-Farmer-Cheese-16-oz/dp/B01J1RCVJ0/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.35,$5.56,,,,$5.56 $5 . 56 $0.35 per oz ( $0.35 $0.35 / oz),standard_price,in_stock,4.6,success
+amazon|340|20260722_013740,20260721_224008,2026-07-22 01:37:40,Amazon,340,"oil, olive, extra virgin",https://www.amazon.com/Amazon-Brand-Virgin-Mediterranean-Previously/dp/B07WPSJWQ6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.34,$5.83,,$11.78,$11.78,$5.83 $5 . 83 $0.34 per ounce ( $0.34 $0.34 / ounce),standard_price,in_stock,4.7,success
+amazon|342|20260722_013804,20260721_224008,2026-07-22 01:38:04,Amazon,342,"rye flour, organic, king arthur",https://www.amazon.com/King-Arthur-Flour-Flavorful-Verified/dp/B08HZJJ61J/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.15,$6.99,,,,$6.99 $6 . 99 $0.15 per ounce ( $0.15 $0.15 / ounce),standard_price,in_stock,4.8,success
+amazon|344|20260722_013848,20260721_224008,2026-07-22 01:38:48,Amazon,344,"arugula, organic",https://www.amazon.com/Organicgirl-Baby-Arugula-Greens-Clamshell/dp/B00JXR8RYW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$15.33,$4.79,,$9.95 for 2-hour delivery with Prime,$9.95,$4.79 $4 . 79 ( $15.33 $15.33 / lb),standard_price,in_stock,4.8,success
+amazon|345|20260722_013931,20260721_224008,2026-07-22 01:39:31,Amazon,345,eggplant,https://www.amazon.com/Produce-Brands-May-Vary-EGG/dp/B000P6G2N8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.94,$1.94,,($0.06/ounce),$0.06,$1.94 $1 . 94 $1.94 per count ( $1.94 $1.94 / count),standard_price,in_stock,4.4,success
+amazon|346|20260722_014015,20260721_224008,2026-07-22 01:40:15,Amazon,346,zucchini,https://www.amazon.com/Baloian-Farms-Zucchini-Squash-Tray/dp/B09QY2K3KY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.75,$1.49,,,,$1.49 $1 . 49 $0.75 per count ( $0.75 $0.75 / count),standard_price,in_stock,4.6,success
+amazon|347|20260722_014058,20260721_224008,2026-07-22 01:40:58,Amazon,347,"okra, frozen",https://www.amazon.com/Amazon-Brand-Happy-Frozen-ounces/dp/B07WR9J2YV/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.99,$1.49,,,,$1.49 $1 . 49 $1.99 per lb ( $1.99 $1.99 / lb),standard_price,in_stock,4.7,success
+amazon|348|20260722_014141,20260721_224008,2026-07-22 01:41:41,Amazon,348,"orange, navel",https://www.amazon.com/Fresh-Produce-Brands-Vary-B000SE9NUG/dp/B000SE9NUG/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.98,$0.98,,,,$0.98 $0 . 98 $0.98 per count ( $0.98 $0.98 / count),standard_price,in_stock,4.6,success
+amazon|349|20260722_014225,20260721_224008,2026-07-22 01:42:25,Amazon,349,grapefruit,https://www.amazon.com/Fresh-Produce-Brands-Vary-B000NSIAGA/dp/B000NSIAGA/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.37,$1.37,,,,$1.37 $1 . 37 $1.37 per count ( $1.37 $1.37 / count),standard_price,in_stock,4.6,success
+amazon|350|20260722_014308,20260721_224008,2026-07-22 01:43:08,Amazon,350,tangerine,https://www.amazon.com/Mandarin-Oranges-3-lb-Bag/dp/B000SE7YL6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.50,$4.49,,,,$4.49 $4 . 49 $1.50 per lb ( $1.50 $1.50 / lb),standard_price,in_stock,4.4,success
+amazon|351|20260722_014351,20260721_224008,2026-07-22 01:43:51,Amazon,351,grapes,https://www.amazon.com/Green-Seedless-Grapes-3-lb/dp/B09MDTP3L8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.00,$5.99,,,,$5.99 $5 . 99 $2.00 per lb ( $2.00 $2.00 / lb),standard_price,in_stock,4.5,success
+amazon|352|20260722_014434,20260721_224008,2026-07-22 01:44:34,Amazon,352,"dates, medjool, natural delights",https://www.amazon.com/Natural-Delights-Verified-USDA-Certified-Superfood/dp/B08WHS2P79/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$12.99,,,,,$12.99,standard_price,in_stock,4.4,success
+amazon|353|20260722_014608,20260721_224008,2026-07-22 01:46:08,Amazon,353,"peach, yellow",https://www.amazon.com/Produce-0000000044035-Yellow-Peach/dp/B07J6Y2K75/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.97,$0.97,,,,$0.97 $0 . 97 $0.97 per count ( $0.97 $0.97 / count),standard_price,in_stock,4.2,success
+amazon|355|20260722_014652,20260721_224008,2026-07-22 01:46:52,Amazon,355,macadamia,https://www.amazon.com/365-Everyday-Value-Macadamia-Nuts/dp/B074VCPCNT/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.12,$8.94,,,,$8.94 $8 . 94 $1.12 per ounce ( $1.12 $1.12 / ounce),standard_price,in_stock,4.5,success
+amazon|359|20260722_014855,20260721_224008,2026-07-22 01:48:55,Amazon,359,"hemp seeds, shelled, organic, manitoba harvest",https://www.amazon.com/Manitoba-Harvest-Organic-Shelled-Protein/dp/B00HXIXJJQ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.50,$10.49,,,,$10.49 $10 . 49 $1.50 per ounce ( $1.50 $1.50 / ounce),standard_price,in_stock,4.8,success
+amazon|361|20260722_014940,20260721_224008,2026-07-22 01:49:40,Amazon,361,"pumpkin seeds, organic",https://www.amazon.com/365-Everyday-Value-Organic-Pumpkin/dp/B07GL6JLZY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.62,$4.99,,FREE 2-hour delivery on orders over $100 with Prime,$100,$4.99 $4 . 99 ( $0.62 $0.62 / ounce),standard_price,in_stock,4.7,success
+amazon|362|20260722_015023,20260721_224008,2026-07-22 01:50:23,Amazon,362,salmon,https://www.amazon.com/Reduced-Shelf-Amazon-Fresh-Skin/dp/B0DC6DGXG4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$10.48,,,,,$10.48,standard_price,in_stock,2.4,success
+amazon|363|20260722_015236,20260721_224008,2026-07-22 01:52:36,Amazon,363,"shrimp, small, frozen",https://www.amazon.com/Fresh-Brand-Medium-Peeled-Deveined/dp/B07ZS3QJ32/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.67,$10.66,,,,$10.66 $10 . 66 $0.67 per ounce ( $0.67 $0.67 / ounce),standard_price,in_stock,4.8,success
+amazon|364|20260722_015319,20260721_224008,2026-07-22 01:53:19,Amazon,364,cod,https://www.amazon.com/Fresh-Brand-Skinless-Sustainably-Previously/dp/B08M119RFR/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$13.74,,,,,$13.74,standard_price,in_stock,4.3,success
+amazon|366|20260722_015453,20260721_224008,2026-07-22 01:54:53,Amazon,366,trout,https://www.amazon.com/Beach-Cliff-Sardines-Water-3-75/dp/B000SRGEXW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.36,$1.34,,,,$1.34 $1 . 34 $0.36 per ounce ( $0.36 $0.36 / ounce),standard_price,in_stock,4.4,success
+amazon|373|20260722_015537,20260721_224008,2026-07-22 01:55:37,Amazon,373,beef chuck roast,https://www.amazon.com/Amazon-Grocery-Center-Boneless-Choice/dp/B0D8P79Z9Q/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$9.27,$23.18,,($9.27 /lb),$9.27,est. $23.18 $23 . 18 /each ($9.27 /lb),standard_price,in_stock,4.5,success
+amazon|373|20260722_015610,20260721_224008,2026-07-22 01:56:10,Amazon,373,"turkey, lunchmeat, sliced",https://www.amazon.com/Fresh-Brand-Sliced-Roasted-Turkey/dp/B07YVMY31Y/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$6.35,$3.57,,,,$3.57 $3 . 57 $6.35 per lb ( $6.35 $6.35 / lb),standard_price,in_stock,4.6,success
+amazon|377|20260722_015924,20260721_224008,2026-07-22 01:59:24,Amazon,377,"vegan cheese, cheddar, sliced",https://www.amazon.com/Fresh-Brand-Plant-Based-Sliced-Cheddar/dp/B09CVQHF31/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.64,$4.52,,FREE 2-hour delivery on orders over $100 with Prime,$100,$4.52 $4 . 52 ( $0.64 $0.64 / ounce),standard_price,in_stock,4.5,success
+amazon|378|20260722_020237,20260721_224008,2026-07-22 02:02:37,Amazon,378,"vegan cream cheese, plain",https://www.amazon.com/Fresh-Brand-Plant-Based-Cream-Cheese/dp/B09CVQHF2W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.42,$2.99,,,,$2.99 $2 . 99 $0.42 per ounce ( $0.42 $0.42 / ounce),standard_price,in_stock,4.4,success
+amazon|383|20260722_020321,20260721_224008,2026-07-22 02:03:21,Amazon,383,"potato, russet",https://www.amazon.com/Fresh-Brand-Russet-Potatoes/dp/B07XW1TNXZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.75,$3.76,,,,$3.76 $3 . 76 $0.75 per lb ( $0.75 $0.75 / lb),standard_price,in_stock,4.6,success
+amazon|385|20260722_020404,20260721_224008,2026-07-22 02:04:04,Amazon,385,"potato, gold",https://www.amazon.com/Fresh-Brand-Gold-Potatoes/dp/B07XW1GNZL/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.44,$7.18,,,,$7.18 $7 . 18 $1.44 per lb ( $1.44 $1.44 / lb),standard_price,in_stock,4.7,success
+amazon|390|20260722_020446,20260721_224008,2026-07-22 02:04:46,Amazon,390,"mushrooms, shiitake",https://www.amazon.com/Fresh-Brand-Whole-Shiitake-Mushrooms/dp/B07XW1BZRM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$23.45,$5.13,,,,$5.13 $5 . 13 $23.45 per lb ( $23.45 $23.45 / lb),standard_price,in_stock,4.7,success
+amazon|391|20260722_020610,20260721_224008,2026-07-22 02:06:10,Amazon,391,"mushrooms, portabella",https://www.amazon.com/Fresh-Brand-Portabella-Mushroom-Caps/dp/B07XW19QBR/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.97,$2.99,,,,$2.99 $2 . 99 $7.97 per lb ( $7.97 $7.97 / lb),standard_price,in_stock,4.7,success
+amazon|392|20260722_020653,20260721_224008,2026-07-22 02:06:53,Amazon,392,"rice, basmati",https://www.amazon.com/Happy-Belly-Basmati-Rice-2lb/dp/B08B22KJ87/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.11,$3.57,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.57 $3 . 57 ( $0.11 $0.11 / ounce),standard_price,in_stock,4.7,success
+amazon|393|20260722_020857,20260721_224008,2026-07-22 02:08:57,Amazon,393,"rice, basmati, organic",https://www.amazon.com/365-Whole-Foods-Market-Organic/dp/B084NJH5FD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.20,$6.29,,FREE 2-hour delivery on orders over $100 with Prime,$100,$6.29 $6 . 29 ( $0.20 $0.20 / ounce),standard_price,in_stock,4.7,success
+amazon|394|20260722_020940,20260721_224008,2026-07-22 02:09:40,Amazon,394,"rice, jasmine",https://www.amazon.com/Happy-Belly-Jasmine-Rice/dp/B08B217JP5/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.08,$2.57,,,,$2.57 $2 . 57 $0.08 per ounce ( $0.08 $0.08 / ounce),standard_price,in_stock,4.7,success
+amazon|396|20260722_021024,20260721_224008,2026-07-22 02:10:24,Amazon,396,spaghetti squash,https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B001PLIUJ6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$5.85,,,,,$5.85,standard_price,in_stock,4.5,success
+amazon|397|20260722_021237,20260721_224008,2026-07-22 02:12:37,Amazon,397,pie crust,https://www.amazon.com/Amazon-Brand-Happy-Belly-Crusts/dp/B087YK15CF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.13,$1.96,,,,$1.96 $1 . 96 $0.13 per ounce ( $0.13 $0.13 / ounce),standard_price,in_stock,4.6,success
+amazon|403|20260722_021321,20260721_224008,2026-07-22 02:13:21,Amazon,403,"tomato, roma, organic",https://www.amazon.com/Produce-PRODUCE-Organic-Roma-Tomato/dp/B07FZFXQQS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.00,$1.00,,,,$1.00 $1 . 00 $1.00 per count ( $1.00 $1.00 / count),standard_price,in_stock,4.6,success
+amazon|404|20260722_021405,20260721_224008,2026-07-22 02:14:05,Amazon,404,"grape tomatoes, organic",https://www.amazon.com/Fresh-Brand-Organic-Grape-Tomatoes/dp/B07XVZZR5L/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.12,,,,,$3.12,standard_price,out_of_stock,4.6,success
+amazon|405|20260722_021508,20260721_224008,2026-07-22 02:15:08,Amazon,405,"avocado, hass, organic",https://www.amazon.com/produce-aisle-701920-Organic-Avocado/dp/B0014GLSE6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.59,$2.59,,,,$2.59 $2 . 59 $2.59 per count ( $2.59 $2.59 / count),standard_price,in_stock,4.6,success
+amazon|406|20260722_021553,20260721_224008,2026-07-22 02:15:53,Amazon,406,"cauliflower, head",https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B000P6G0GM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.95,$3.95,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.95 $3 . 95 ( $3.95 $3.95 / count),standard_price,in_stock,4.6,success
+amazon|407|20260722_021637,20260721_224008,2026-07-22 02:16:37,Amazon,407,"broccoli, head",https://www.amazon.com/Tanimura-Antle-Organic-Broccoli-Head/dp/B08731CTJS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.72,$3.72,,,,$3.72 $3 . 72 $3.72 per count ( $3.72 $3.72 / count),standard_price,in_stock,4.5,success
+amazon|411|20260722_021801,20260721_224008,2026-07-22 02:18:01,Amazon,411,"milk, fat free, lactose free",https://www.amazon.com/Amazon-Happy-Belly-Lactose-Pasteurized/dp/B07DGQVLBK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$2.99,,,,$2.99 $2 . 99 $0.05 per fluid ounce ( $0.05 $0.05 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|412|20260722_021844,20260721_224008,2026-07-22 02:18:44,Amazon,412,"milk, Lowfat, lactose free",https://www.amazon.com/Amazon-Brand-Lactose-Ultra-Pasteurized-Kosher/dp/B07DGS2MQ4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$3.08,,,,$3.08 $3 . 08 $0.05 per fluid ounce ( $0.05 $0.05 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|413|20260722_021928,20260721_224008,2026-07-22 02:19:28,Amazon,413,"milk, 2%, lactose free",https://www.amazon.com/Amazon-Brand-Lactose-Reduced-Ultra-Pasteurized/dp/B07DGSL8FX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.05,$2.99,,,,$2.99 $2 . 99 $0.05 per fluid ounce ( $0.05 $0.05 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|414|20260722_022011,20260721_224008,2026-07-22 02:20:11,Amazon,414,"milk, whole, lactose free",https://www.amazon.com/Amazon-Brand-Lactose-Ultra-Pasteurized-Kosher/dp/B07DGS2C29/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.04,$2.75,,,,$2.75 $2 . 75 $0.04 per fluid ounce ( $0.04 $0.04 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|415|20260722_022055,20260721_224008,2026-07-22 02:20:55,Amazon,415,"vegan hot dogs, beef, impossible",https://www.amazon.com/Impossible-Plants-Fully-Cooked-Links/dp/B0CVSD3SJW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.09,,,,,$7.09,standard_price,in_stock,4.3,success
+amazon|416|20260722_022238,20260721_224008,2026-07-22 02:22:38,Amazon,416,"vegan protein powder, chocolate, optimum nutrition",https://www.amazon.com/Optimum-Nutrition-Standard-Protein-Recovery/dp/B09VMPYWVX/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.24,$34.99,,,,$34.99 $34 . 99 $1.24 per ounce ( $1.24 $1.24 / ounce),standard_price,in_stock,4.2,success
+amazon|417|20260722_022402,20260721_224008,2026-07-22 02:24:02,Amazon,417,"mango, large, organic",https://www.amazon.com/produce-aisle-B001392XUC-Organic-Medium/dp/B001392XUC/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.50,$2.50,,,,$2.50 $2 . 50 $2.50 per count ( $2.50 $2.50 / count),standard_price,in_stock,4.5,success
+amazon|418|20260722_022445,20260721_224008,2026-07-22 02:24:45,Amazon,418,creatine monohydrate,https://www.amazon.com/Amazon-Basics-Creatine-Monohydrate-Powder/dp/B0FG7P8WMW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.06,$11.18,,,,$11.18 $11 . 18 $1.06 per ounce ( $1.06 $1.06 / ounce),standard_price,in_stock,4.5,success
+amazon|419|20260722_022528,20260721_224008,2026-07-22 02:25:28,Amazon,419,"peach, yellow, organic",https://www.amazon.com/Organic-Yellow-Peach-1-Each/dp/B000P6L4BI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.26,$1.26,,,,$1.26 $1 . 26 $1.26 per count ( $1.26 $1.26 / count),standard_price,in_stock,4.3,success
+amazon|420|20260722_022612,20260721_224008,2026-07-22 02:26:12,Amazon,420,"peach, white",https://www.amazon.com/produce-aisle-3304040-White-Flesh/dp/B000RGYJ6I/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.82,$0.82,,,,$0.82 $0 . 82 $0.82 per count ( $0.82 $0.82 / count),standard_price,in_stock,4.4,success
+amazon|421|20260722_022656,20260721_224008,2026-07-22 02:26:56,Amazon,421,"spaghetti squash, organic",https://www.amazon.com/Organic-Spaghetti-Squash-One-Large/dp/B000RGWKG4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$7.96,$7.96,,,,$7.96 $7 . 96 $7.96 per count ( $7.96 $7.96 / count),standard_price,in_stock,4.6,success
+amazon|422|20260722_022901,20260721_224008,2026-07-22 02:29:01,Amazon,422,"protein shake, fairlife, core Powder, chocolate, 26g of protein",https://www.amazon.com/Core-Powder-Protein-Shake-Chocolate/dp/B07PGPY5VB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.27,$3.79,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.79 $3 . 79 ( $0.27 $0.27 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|424|20260722_023027,20260721_224008,2026-07-22 02:30:27,Amazon,424,"protein shake, fairlife, core Powder, chocolate, 42g of protein",https://www.amazon.com/Core-Powder-fairlife-Protein-Chocolate/dp/B01N4OMLOZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.38,$5.28,,,,$5.28 $5 . 28 $0.38 per fluid ounce ( $0.38 $0.38 / fluid ounce),standard_price,in_stock,4.6,success
+amazon|425|20260722_023100,20260721_224008,2026-07-22 02:31:00,Amazon,425,"protein shake, fairlife, core Powder, vanilla, 42g of protein",https://www.amazon.com/Core-Powder-fairlife-Protein-Chocolate/dp/B01MT9NTDD/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.38,$5.28,,FREE 2-hour delivery on orders over $100 with Prime,$100,$5.28 $5 . 28 ( $0.38 $0.38 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|426|20260722_023144,20260721_224008,2026-07-22 02:31:44,Amazon,426,"vegan protein shake, owyn, chocolate ",https://www.amazon.com/Only-What-You-Need-Chocolate/dp/B07BJCRJLK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.29,$3.49,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.49 $3 . 49 ( $0.29 $0.29 / fluid ounce),standard_price,in_stock,4.0,success
+amazon|427|20260722_023228,20260721_224008,2026-07-22 02:32:28,Amazon,427,"vegan protein shake, owyn, pro elite, chocolate ",https://www.amazon.com/OWYN-Chocolate-Elite-Plant-Protein/dp/B08H8TM5R7/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.35,$4.19,,,,$4.19 $4 . 19 $0.35 per fluid ounce ( $0.35 $0.35 / fluid ounce),standard_price,in_stock,3.9,success
+amazon|428|20260722_023311,20260721_224008,2026-07-22 02:33:11,Amazon,428,"cauliflower, head, organic",https://www.amazon.com/Fresh-Produce-Brands-May-Vary/dp/B000P6G0GM/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.95,$3.95,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.95 $3 . 95 ( $3.95 $3.95 / count),standard_price,in_stock,4.6,success
+amazon|429|20260722_023354,20260721_224008,2026-07-22 02:33:54,Amazon,429,"broccoli, head, organic",https://www.amazon.com/Tanimura-Antle-Organic-Broccoli-Head/dp/B08731CTJS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.72,$3.72,,,,$3.72 $3 . 72 $3.72 per count ( $3.72 $3.72 / count),standard_price,in_stock,4.5,success
+amazon|430|20260722_023437,20260721_224008,2026-07-22 02:34:37,Amazon,430,"peach, yellow",https://www.amazon.com/Organic-Yellow-Peach-1-Each/dp/B000P6L4BI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.26,$1.26,,,,$1.26 $1 . 26 $1.26 per count ( $1.26 $1.26 / count),standard_price,in_stock,4.3,success
+amazon|431|20260722_023522,20260721_224008,2026-07-22 02:35:22,Amazon,431,acorn squash,https://www.amazon.com/Baloian-Acorn-Squash-2-count/dp/B097G4SP89/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$1.12,$2.24,,,,$2.24 $2 . 24 $1.12 per count ( $1.12 $1.12 / count),standard_price,in_stock,4.6,success
+amazon|433|20260722_023604,20260721_224008,2026-07-22 02:36:04,Amazon,433,"mac and cheese, kraft, Powder mac, original",https://www.amazon.com/Kraft-Mac-Cheese-Artificial-Preservatives/dp/B0G2QQ8WQK/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.34,$2.48,,,,$2.48 $2 . 48 $0.34 per ounce ( $0.34 $0.34 / ounce),standard_price,in_stock,4.1,success
+amazon|434|20260722_023647,20260721_224008,2026-07-22 02:36:47,Amazon,434,"cereal, cheerios, original",https://www.amazon.com/Honey-Cheerios-Gluten-Free-Cereal/dp/B07CZCM4VZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.32,$3.47,,,,$3.47 $3 . 47 $0.32 per ounce ( $0.32 $0.32 / ounce),standard_price,in_stock,4.8,success
+amazon|435|20260722_023811,20260721_224008,2026-07-22 02:38:11,Amazon,435,"cereal, cheerios, original, high protein",https://www.amazon.com/Cheerios-Protein-Cereal-Strawberry-Family/dp/B0DHW9RPY7/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.33,$4.97,,,,$4.97 $4 . 97 $0.33 per ounce ( $0.33 $0.33 / ounce),standard_price,in_stock,4.5,success
+amazon|436|20260722_023854,20260721_224008,2026-07-22 02:38:54,Amazon,436,"granola, nature valley",https://www.amazon.com/Nature-Valley-Granola-Crunch-Honey/dp/B0199RFD6K/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.28,$4.47,,,,$4.47 $4 . 47 $0.28 per ounce ( $0.28 $0.28 / ounce),standard_price,in_stock,4.6,success
+amazon|437|20260722_023938,20260721_224008,2026-07-22 02:39:38,Amazon,437,"granola, nature valley, high protein",https://www.amazon.com/Nature-Valley-Granola-Protein-Honey/dp/B01BM7KN0G/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.41,$4.47,,,,$4.47 $4 . 47 $0.41 per ounce ( $0.41 $0.41 / ounce),standard_price,in_stock,4.8,success
+amazon|438|20260722_024023,20260721_224008,2026-07-22 02:40:23,Amazon,438,"cereal, kellogg's",https://www.amazon.com/Special-Breakfast-Cereal-Original-18/dp/B0014CZJ8G/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.28,$4.98,,FREE 2-hour delivery on orders over $100 with Prime,$100,$4.98 $4 . 98 ( $0.28 $0.28 / ounce),standard_price,in_stock,4.7,success
+amazon|439|20260722_024107,20260721_224008,2026-07-22 02:41:07,Amazon,439,"cereal, kellogg's, high protein",https://www.amazon.com/Kelloggs-Special-Breakfast-Original-Multi-Grain/dp/B0CVS7XJGY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.28,$4.98,,,,$4.98 $4 . 98 $0.28 per ounce ( $0.28 $0.28 / ounce),standard_price,in_stock,4.2,success
+amazon|440|20260722_024150,20260721_224008,2026-07-22 02:41:50,Amazon,440,"frozen breakfast waffles, eggo",https://www.amazon.com/Eggo-Frozen-Waffles-Breakfast-Buttermilk/dp/B000Q5K5JA/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$2.87,,,,,$2.87,standard_price,out_of_stock,4.8,success
+amazon|441|20260722_024253,20260721_224008,2026-07-22 02:42:53,Amazon,441,"frozen breakfast waffles, eggo, high protein",https://www.amazon.com/Eggo-Protein-Waffles-Breakfast-Buttermilk/dp/B0DN292YGQ,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.40,$4.87,,,,$4.87 $4 . 87 $0.40 per ounce ( $0.40 $0.40 / ounce),standard_price,in_stock,4.7,success
+amazon|442|20260722_024336,20260721_224008,2026-07-22 02:43:36,Amazon,442,"flavored instant oatmeal, quaker",https://www.amazon.com/Quaker-Instant-Oatmeal-Cinnamon-Packets/dp/B09YDSPCC1/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.25,$2.97,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.97 $2 . 97 ( $0.25 $0.25 / ounce),standard_price,in_stock,4.8,success
+amazon|443|20260722_024420,20260721_224008,2026-07-22 02:44:20,Amazon,443,"flavored instant oatmeal, quaker, high protein",https://www.amazon.com/Quaker-Instant-Oatmeal-Protein-Cinnamon/dp/B08CBSY3WZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.33,$4.17,,,,$4.17 $4 . 17 $0.33 per ounce ( $0.33 $0.33 / ounce),standard_price,in_stock,4.4,success
+amazon|445|20260722_024504,20260721_224008,2026-07-22 02:45:04,Amazon,445,"flavored instant oatmeal, quaker, cup",https://www.amazon.com/Quaker-Instant-Oatmeal-Express-Maple/dp/B00CO20XQS/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.59,$0.99,,FREE 2-hour delivery on orders over $100 with Prime,$100,$0.99 $0 . 99 ( $0.59 $0.59 / ounce),standard_price,in_stock,4.5,success
+amazon|448|20260722_024548,20260721_224008,2026-07-22 02:45:48,Amazon,448,flavored instant oatmeal,https://www.amazon.com/Amazon-Brand-Happy-Instant-Oatmeal/dp/B08FNQNJKB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.21,$3.11,,,,$3.11 $3 . 11 $0.21 per ounce ( $0.21 $0.21 / ounce),standard_price,in_stock,4.6,success
+amazon|449|20260722_024629,20260721_224008,2026-07-22 02:46:29,Amazon,449,"spaghetti, barilla",https://www.amazon.com/Barilla-Pasta-Spaghetti-16-Ounce/dp/B000R2Z6AA/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.12,$1.84,,FREE 2-hour delivery on orders over $100 with Prime,$100,$1.84 $1 . 84 ( $0.12 $0.12 / ounce),standard_price,in_stock,4.8,success
+amazon|450|20260722_024709,20260721_224008,2026-07-22 02:47:09,Amazon,450,"spaghetti, barilla, high protein",https://www.amazon.com/Barilla-ProteinPlus-Multigrain-Spaghetti-Pasta/dp/B001A5V49A/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.14,$2.00,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.00 $2 . 00 ( $0.14 $0.14 / ounce),standard_price,in_stock,4.8,success
+amazon|453|20260722_024909,20260721_224008,2026-07-22 02:49:09,Amazon,453,"peanut butter, creamy, skippy",https://www.amazon.com/Skippy-Creamy-Peanut-Butter-Ounce/dp/B0005ZH4QI/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.14,$5.79,,,,$5.79 $5 . 79 $0.14 per ounce ( $0.14 $0.14 / ounce),standard_price,in_stock,4.8,success
+amazon|456|20260722_024950,20260721_224008,2026-07-22 02:49:50,Amazon,456,"yogurt drink, chobani",https://www.amazon.com/Chobani%C2%AE-Low-Fat-Strawberry-Greek-Yogurt/dp/B0BQ3FTN2Q/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$1.25,,,,$1.25 $1 . 25 $0.18 per fluid ounce ( $0.18 $0.18 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|457|20260722_025030,20260721_224008,2026-07-22 02:50:30,Amazon,457,"yogurt drink, chobani, high protein 20 g",https://www.amazon.com/Chobani-Complete-Greek-Yogurt-Strawberry/dp/B08BJW9TNZ/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$2.39,,,,$2.39 $2 . 39 $0.24 per fluid ounce ( $0.24 $0.24 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|458|20260722_025110,20260721_224008,2026-07-22 02:51:10,Amazon,458,"yogurt drink, chobani, high protein 30 g",https://www.amazon.com/Chobani%C2%AE-Protein-Drink-Strawberries-Cream/dp/B0DQVTF72Y/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.21,$2.99,,,,$2.99 $2 . 99 $0.21 per fluid ounce ( $0.21 $0.21 / fluid ounce),standard_price,in_stock,4.7,success
+amazon|459|20260722_025151,20260721_224008,2026-07-22 02:51:51,Amazon,459,"yogurt, high protein, greek, strawberry, cups, pro, oikos",https://www.amazon.com/Oikos-Strawberry-Cultured-Ultra-Filtered-Delicious/dp/B0BTTKD6R1/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.16,$3.48,,,,$3.48 $3 . 48 $0.16 per ounce ( $0.16 $0.16 / ounce),standard_price,in_stock,4.7,success
+amazon|460|20260722_025231,20260721_224008,2026-07-22 02:52:31,Amazon,460,"yogurt, high protein, greek, vanilla, pro, tub, oikos",https://www.amazon.com/Oikos-Yogurt-Cultured-Ultra-Filtered-Milk-Vanilla/dp/B09J78RGNT/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.24,$7.64,,,,$7.64 $7 . 64 $0.24 per fluid ounce ( $0.24 $0.24 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|461|20260722_025311,20260721_224008,2026-07-22 02:53:11,Amazon,461,"yogurt, high protein, greek, vanilla, triple zero, tub, oikos",https://www.amazon.com/Dannon-Company-Oikos-Triple-Vanilla/dp/B01J7GO9P4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$5.99,,,,$5.99 $5 . 99 $0.19 per ounce ( $0.19 $0.19 / ounce),standard_price,in_stock,4.8,success
+amazon|462|20260722_025351,20260721_224008,2026-07-22 02:53:51,Amazon,462,"yogurt, high protein, greek, triple zero, tub, oikos",https://www.amazon.com/DANNON-OIKOS-TRIPLE-ZERO-PLAIN/dp/B0DL8RM8M3/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.19,$6.19,,,,$6.19 $6 . 19 $0.19 per ounce ( $0.19 $0.19 / ounce),standard_price,in_stock,4.7,success
+amazon|463|20260722_025431,20260721_224008,2026-07-22 02:54:31,Amazon,463,"yogurt, high protein, greek, pro, tub, oikos",https://www.amazon.com/Oikos-Yogurt-Cultured-Ultra-Filtered-Milk-Plain/dp/B0911H8KSY/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$3.27,,,,,$3.27,standard_price,in_stock,5.0,success
+amazon|464|20260722_025601,20260721_224008,2026-07-22 02:56:01,Amazon,464,"frozen pb&j sandwich, uncrustables",https://www.amazon.com/Smuckers-Uncrustables-Strawberry-Sandwiches-10Count/dp/B003OAANT6/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.49,$9.84,,,,$9.84 $9 . 84 $0.49 per ounce ( $0.49 $0.49 / ounce),standard_price,in_stock,4.8,success
+amazon|465|20260722_025642,20260721_224008,2026-07-22 02:56:42,Amazon,465,"frozen pb&j sandwich, uncrustables, high protein",https://www.amazon.com/Smuckers-Uncrustables-Bright-Eyed-Strawberry-Sandwiches/dp/B0FX6246Z4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.44,$9.84,,($0.37/ounce),$0.37,$9.84 $9 . 84 $0.44 per ounce ( $0.44 $0.44 / ounce),standard_price,in_stock,4.8,success
+amazon|466|20260722_025721,20260721_224008,2026-07-22 02:57:21,Amazon,466,"frozen breakfast waffle, kodiak",https://www.amazon.com/Kodiak-Waffles-Buttermilk-Vanilla-13-4oz/dp/B07WD9MY9W/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.41,$5.48,,,,$5.48 $5 . 48 $0.41 per ounce ( $0.41 $0.41 / ounce),standard_price,in_stock,4.6,success
+amazon|468|20260722_025801,20260721_224008,2026-07-22 02:58:01,Amazon,468,"frosted toaster pastry, strawberry, pop-tarts",https://www.amazon.com/Kelloggs-Pop-Tarts-Frosted-Strawberry-Pastries/dp/B07YTZNTHF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.21,$2.78,,FREE 2-hour delivery on orders over $100 with Prime,$100,$2.78 $2 . 78 ( $0.21 $0.21 / ounce),standard_price,in_stock,4.8,success
+amazon|469|20260722_025843,20260721_224008,2026-07-22 02:58:43,Amazon,469,"frosted toaster pastry, strawberry, pop-tarts, high protein",https://www.amazon.com/Pop-Tarts-Protein-Toaster-Pastries-Strawberry/dp/B0FS2PGDRW/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.27,$3.79,,FREE 2-hour delivery on orders over $100 with Prime,$100,$3.79 $3 . 79 ( $0.27 $0.27 / ounce),standard_price,in_stock,4.1,success
+amazon|470|20260722_025923,20260721_224008,2026-07-22 02:59:23,Amazon,470,"frosted toaster pastry, strawberry",https://www.amazon.com/Happy-Belly-Frosted-Pastries-Strawberry/dp/B096XZFYDL/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.10,$1.40,,,,$1.40 $1 . 40 $0.10 per ounce ( $0.10 $0.10 / ounce),standard_price,in_stock,4.5,success
+amazon|472|20260722_030003,20260721_224008,2026-07-22 03:00:03,Amazon,472,"yogurt drink, chobani, high protein 15g",https://www.amazon.com/Chobani%C2%AE-Protein-Lowfat-Yogurt-Strawberries/dp/B0DQVWC4GF/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$1.25,,,,$1.25 $1 . 25 $0.18 per fluid ounce ( $0.18 $0.18 / fluid ounce),standard_price,in_stock,4.8,success
+amazon|473|20260722_030043,20260721_224008,2026-07-22 03:00:43,Amazon,473,"tortilla, four, carb balance, mission",https://www.amazon.com/Mission-Flour-Fajita-Balance-6-0-8ct/dp/B0CL7ZK1BB/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.47,$3.72,,,,$3.72 $3 . 72 $0.47 per count ( $0.47 $0.47 / count),standard_price,in_stock,4.7,success
+amazon|474|20260722_030123,20260721_224008,2026-07-22 03:01:23,Amazon,474,"tortilla, whole wheat, carb balance, mission",https://www.amazon.com/Mission-Balance-Whole-Tortillas-Grains/dp/B01FLKYJB4/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.60,$4.79,,,,$4.79 $4 . 79 $0.60 per count ( $0.60 $0.60 / count),standard_price,in_stock,4.7,success
+amazon|475|20260722_030203,20260721_224008,2026-07-22 03:02:03,Amazon,475,"tortilla, proten, mission",https://www.amazon.com/Mission-Protein-Tortilla-Wraps-Fiber/dp/B07WMRT5Z8/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.72,$6.49,,,,$6.49 $6 . 49 $0.72 per ounce ( $0.72 $0.72 / ounce),standard_price,in_stock,4.6,success
+amazon|476|20260722_030243,20260721_224008,2026-07-22 03:02:43,Amazon,476,"tortilla, flour, mission",https://www.amazon.com/Mission-Fajita-Grande-Flour-Tortillas/dp/B01FLKYJI2/,"Product summary presents key product information 
+Keyboard shortcut  shift + opt + D",$0.18,$1.78,,,,$1.78 $1 . 78 $0.18 per count ( $0.18 $0.18 / count),standard_price,in_stock,4.6,success
